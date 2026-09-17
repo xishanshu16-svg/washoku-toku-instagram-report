@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="和食 徳のInstagram集客に向けた京都グルメリール調査・企画ダッシュボード">
+  <title>和食 徳｜Instagram Reels Research</title>
+  <style>
+    :root{--navy:#0d1b2a;--navy2:#16283c;--gold:#c59a4a;--cream:#f7f3eb;--paper:#fff;--ink:#17202b;--muted:#657282;--line:#dde2e7;--green:#176b52;--amber:#9a5b13;--red:#a33a3a;--shadow:0 14px 40px rgba(13,27,42,.09)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic UI",Meiryo,sans-serif;line-height:1.75}
+    a{color:#9b6b17;text-underline-offset:3px}button{font:inherit}.wrap{width:min(1180px,calc(100% - 32px));margin:auto}.hero{background:radial-gradient(circle at 83% 10%,rgba(197,154,74,.35),transparent 26%),linear-gradient(135deg,#0b1724,#19324b);color:#fff;padding:74px 0 54px;border-bottom:4px solid var(--gold)}
+    .eyebrow{letter-spacing:.16em;text-transform:uppercase;color:#e6c889;font-weight:800;font-size:.76rem}.hero h1{font-size:clamp(2.1rem,5vw,4.7rem);line-height:1.05;margin:.3rem 0 1rem}.hero p{max-width:760px;color:#d5dee8;font-size:1.05rem}.stamp{display:inline-flex;gap:.5rem;align-items:center;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:.45rem .8rem;font-size:.78rem;color:#e6edf4}
+    .nav{position:sticky;top:0;z-index:20;background:rgba(13,27,42,.96);backdrop-filter:blur(10px);overflow:auto;white-space:nowrap;border-bottom:1px solid rgba(255,255,255,.08)}.nav .wrap{display:flex;gap:1.2rem}.nav a{color:#dfe8f1;text-decoration:none;padding:.85rem 0;font-size:.84rem}.nav a:hover{color:#f0ce82}
+    main{padding:34px 0 70px}section{margin:0 0 48px}.section-head{display:flex;gap:16px;align-items:end;justify-content:space-between;margin-bottom:18px}.section-head h2{font-size:clamp(1.55rem,3vw,2.3rem);line-height:1.2;margin:0}.section-head p{margin:0;color:var(--muted);max-width:640px}.kicker{display:block;color:var(--gold);font-weight:900;letter-spacing:.1em;font-size:.74rem;margin-bottom:.3rem}
+    .grid{display:grid;gap:16px}.grid-4{grid-template-columns:repeat(4,1fr)}.grid-3{grid-template-columns:repeat(3,1fr)}.grid-2{grid-template-columns:repeat(2,1fr)}.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:var(--shadow)}.card h3{margin:.1rem 0 .5rem;line-height:1.35}.card p{margin:.4rem 0}.metric strong{font-size:2rem;line-height:1;display:block;color:var(--navy)}.metric span{font-size:.78rem;color:var(--muted)}
+    .verdict{border-left:5px solid var(--gold);background:#fff9ed}.verdict b{color:var(--navy)}.pill{display:inline-flex;align-items:center;padding:.23rem .55rem;border-radius:999px;font-size:.72rem;font-weight:800;margin:.15rem .2rem .15rem 0}.pill.exact{background:#e5f3ed;color:var(--green)}.pill.ref{background:#fff0dc;color:var(--amber)}.pill.fact{background:#eaf0f6;color:#31506e}.pill.infer{background:#f4ecff;color:#714b97}.pill.unset{background:#f3f3f3;color:#666}.stars{color:#b47b13;letter-spacing:.06em;font-weight:900}
+    .toku{background:linear-gradient(135deg,#fff,#fcf5e7);border:1px solid #ead6ae}.feature-list{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}.feature{border:1px solid #eadfc9;border-radius:13px;padding:12px;background:rgba(255,255,255,.75)}.feature b{display:block;color:var(--navy)}
+    .account-table,.timeline-table{width:100%;border-collapse:collapse}.account-table th,.account-table td,.timeline-table th,.timeline-table td{padding:10px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.account-table th,.timeline-table th{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}.table-wrap{overflow:auto}.num{text-align:right!important;font-variant-numeric:tabular-nums}.tiny{font-size:.78rem;color:var(--muted)}
+    .rank{display:grid;grid-template-columns:62px 1fr auto;gap:14px;align-items:center}.rankno{font:900 2.2rem/1 Georgia,serif;color:#d8bd83}.rank-meta{display:flex;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:.82rem}.views{font-weight:900;color:var(--navy);font-size:1.1rem}.reel-card{padding:0;overflow:hidden}.reel-top{padding:18px 20px;background:linear-gradient(90deg,#102236,#1b3853);color:#fff}.reel-top .views{color:#f2d18c}.reel-body{padding:20px}.reel-body dl{display:grid;grid-template-columns:115px 1fr;gap:7px 12px;margin:0}.reel-body dt{font-weight:800;color:#405469;font-size:.82rem}.reel-body dd{margin:0}.reel-body details{margin-top:14px;border-top:1px solid var(--line);padding-top:12px}.reel-body summary{cursor:pointer;font-weight:900;color:var(--navy)}
+    .pattern{position:relative;padding-top:42px}.pattern .n{position:absolute;top:14px;right:18px;font:900 3.2rem/1 Georgia,serif;color:#efe4cf}.bar{height:8px;border-radius:8px;background:#edf0f2;overflow:hidden;margin:.65rem 0}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--gold),#e0bf7b)}
+    .plan{border-top:5px solid var(--gold)}.plan h3{font-size:1.28rem}.plan .hook{background:var(--navy);color:#fff;border-radius:12px;padding:13px;margin:12px 0}.plan ul{padding-left:1.2rem}.plan li{margin:.35rem 0}.ab{display:grid;grid-template-columns:1fr 1fr;gap:9px}.ab div{background:#f6f7f8;border-radius:10px;padding:10px}.timeline-table td:first-child{white-space:nowrap;font-weight:900;color:var(--navy)}
+    .action{display:grid;grid-template-columns:70px 1fr;gap:14px}.action .step{background:var(--navy);color:#f0ce82;border-radius:12px;text-align:center;padding:10px;font-weight:900}.notice{background:#f1f4f7;border-radius:12px;padding:13px 15px;font-size:.88rem;color:#425365}.sources li{margin:.45rem 0}.footer{background:var(--navy);color:#cfd8e2;padding:32px 0;font-size:.82rem}.footer strong{color:#fff}.filterbar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}.filterbar button{border:1px solid var(--line);background:#fff;padding:.5rem .8rem;border-radius:999px;cursor:pointer}.filterbar button.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+    @media(max-width:900px){.grid-4{grid-template-columns:repeat(2,1fr)}.grid-3,.feature-list{grid-template-columns:1fr 1fr}.rank{grid-template-columns:45px 1fr}.views{grid-column:2}.hero{padding-top:54px}}
+    @media(max-width:620px){.wrap{width:min(100% - 20px,1180px)}.grid-4,.grid-3,.grid-2,.feature-list,.ab{grid-template-columns:1fr}.card{padding:16px;border-radius:14px}.reel-body dl{grid-template-columns:1fr}.reel-body dt{margin-top:6px}.section-head{display:block}.section-head p{margin-top:6px}.hero h1{font-size:2.35rem}.account-table{min-width:680px}.timeline-table{min-width:640px}}
+  </style>
+</head>
+<body>
+  <header class="hero"><div class="wrap">
+    <div class="eyebrow">Kyoto Gourmet Reels Intelligence</div>
+    <h1>和食 徳<br>Instagram 集客設計</h1>
+    <p>京都グルメ系インフルエンサー7アカウント・公開リール105件を確認。バズを「入口の期待差・価格公開・調理の証拠」に分解し、和食 徳で撮れる企画と秒単位の撮影指示へ変換しました。</p>
+    <div class="stamp">公開情報確認：2026-09-17 JST　｜　投稿の投稿日は非表示</div>
+  </div></header>
+  <nav class="nav"><div class="wrap"><a href="#summary">概要</a><a href="#toku">和食 徳</a><a href="#ranking">投稿ランキング</a><a href="#patterns">成功要因</a><a href="#transfer">転用</a><a href="#plans">企画</a><a href="#shoot">撮影指示</a><a href="#action">Action Plan</a><a href="#sources">出典</a></div></nav>
+  <main class="wrap">
+    <section id="summary">
+      <div class="section-head"><div><span class="kicker">01 / EXECUTIVE SUMMARY</span><h2>結論：最初に売るのは料理ではなく「期待の反転」</h2></div><p>価格・地域・形式・再生数の全条件を満たした投稿だけを掲載し、その成功構造を和食 徳へ転用しました。</p></div>
+      <div class="grid grid-3">
+        <div class="card metric"><strong>105</strong><span>公開リール確認数（7×15件）</span></div>
+        <div class="card metric"><strong>1</strong><span>価格・京都・リール・10万再生の厳密一致</span></div>
+        <div class="card metric"><strong>7</strong><span>指定アカウント確認数</span></div>
+      </div>
+      <div class="card verdict" style="margin-top:16px"><b>最優先施策：</b>「高そうで入りづらい」という先入観を外観で作り、炭火・旬・器・料理人の所作で価値を証明してから、<b>“1万円台で味わえる”</b>と開示する15秒リール。安売りではなく、価格への納得を生む順番が重要です。</div>
+      <div class="notice" style="margin-top:12px">数字は確認できた公開表示だけを掲載。再生数はプロフィールのリールグリッド、いいね・コメントは投稿詳細、価格は投稿本文と店舗公開情報で照合しました。未確認値は「取得不可」。因果分析は公開映像・コピー・反応からの仮説で、Instagram内部指標による証明ではありません。</div>
+    </section>
+
+    <section id="toku">
+      <div class="section-head"><div><span class="kicker">02 / BRAND FIT</span><h2>和食 徳の勝ち筋</h2></div><p>公開情報から確認できる事実と、そこから導く企画仮説を分離しています。</p></div>
+      <div class="card toku">
+        <div><span class="pill fact">確認できた事実</span><span class="pill infer">分析仮説</span></div>
+        <h3>紫野の一軒家で、旬の魚・野菜・炭火を「選べる日本料理」として見せる</h3>
+        <div class="feature-list">
+          <div class="feature"><b>料理・価格</b>日本料理。夜の予算帯は1万〜1万4,999円。刺身、季節料理、炭火焼、おまかせコースを公開。</div>
+          <div class="feature"><b>立地</b>京都市北区紫野上門前町。北大路駅から徒歩圏として掲載される住宅地側の立地。</div>
+          <div class="feature"><b>空間</b>一軒家、落ち着いた空間、カウンターと座敷。大切な食事の「静けさ」を映像にできる。</div>
+          <div class="feature"><b>強い画</b>のどぐろ、甘鯛松笠焼き、雲丹＋和牛など。炭火、皮目、湯気、盛付けは1秒で価値が伝わる。</div>
+          <div class="feature"><b>ドリンク</b>日本酒・焼酎・ワインを公開。料理とのペアリング二択はコメント誘発企画に転用可能。</div>
+          <div class="feature"><b>差別化仮説</b>格式だけを押すより、「旬を、料理人の手仕事で、構えすぎず味わえる」ことが価格納得につながる。</div>
+        </div>
+        <p class="tiny">注意：当日の料理は仕入れ・季節で変動する前提。撮影時に提供中の品名・価格・コース内容を店舗へ再確認してください。「予約困難」「庭園」「創業年」など、和食 徳で確認できない要素は訴求に使いません。</p>
+      </div>
+      <div class="card table-wrap" style="margin-top:16px">
+        <h3>指定アカウント確認サマリー</h3>
+        <table class="account-table"><thead><tr><th>アカウント</th><th class="num">フォロワー</th><th class="num">確認</th><th class="num">条件一致</th><th>判定</th></tr></thead><tbody>
+          <tr><td><a href="https://www.instagram.com/kyoto_tabetoku/" target="_blank" rel="noopener">@kyoto_tabetoku</a></td><td class="num">23.1万人</td><td class="num">15</td><td class="num">0</td><td>掲載対象なし</td></tr>
+          <tr><td><a href="https://www.instagram.com/sorami_kyoto/" target="_blank" rel="noopener">@sorami_kyoto</a></td><td class="num">12.9万人</td><td class="num">15</td><td class="num">0</td><td>掲載対象なし</td></tr>
+          <tr><td><a href="https://www.instagram.com/kyoto.food07/" target="_blank" rel="noopener">@kyoto.food07</a></td><td class="num">10.6万人</td><td class="num">15</td><td class="num">0</td><td>掲載対象なし</td></tr>
+          <tr><td><a href="https://www.instagram.com/mogu.on/" target="_blank" rel="noopener">@mogu.on</a></td><td class="num">10.3万人</td><td class="num">15</td><td class="num">0</td><td>掲載対象なし</td></tr>
+          <tr><td><a href="https://www.instagram.com/mimi_kyototabi/" target="_blank" rel="noopener">@mimi_kyototabi</a></td><td class="num">9.0万人</td><td class="num">15</td><td class="num">0</td><td>掲載対象なし</td></tr>
+          <tr><td><a href="https://www.instagram.com/nico_kyotogourmet888/" target="_blank" rel="noopener">@nico_kyotogourmet888</a></td><td class="num">3.6万人</td><td class="num">15</td><td class="num">0</td><td>掲載対象なし</td></tr>
+          <tr><td><a href="https://www.instagram.com/omame.kyoto/" target="_blank" rel="noopener">@omame.kyoto</a></td><td class="num">7.7万人</td><td class="num">15</td><td class="num">1</td><td>条件完全一致あり</td></tr>
+        </tbody></table>
+        <p class="tiny">フォロワー・再生表示は確認時点の公開値で変動します。条件外の投稿は掲載していません。</p>
+      </div>
+    </section>
+
+    <section id="ranking">
+      <div class="section-head"><div><span class="kicker">03 / QUALIFIED BUZZ POST</span><h2>条件完全一致投稿</h2></div><p>客単価1万〜1万5,000円程度・京都・Instagramリール・10万再生以上の全条件を満たす投稿のみ。</p></div>
+      <div class="grid grid-2" id="postGrid">
+        <article class="card reel-card" data-kind="exact"><div class="reel-top"><span class="pill exact">条件完全一致</span><div class="rank"><div class="rankno">1</div><div><b>天㐂</b><div class="rank-meta">お豆｜京都グルメ・おでかけ　@​omame.kyoto</div></div><div class="views">33.6万再生</div></div></div><div class="reel-body"><dl><dt>価格</dt><dd>お座敷の天ぷら会席 13,000円（税込）</dd><dt>反応</dt><dd>いいね 5,340／コメント 86</dd><dt>冒頭フック</dt><dd>「衝撃のお値段は…」「9割の人が誤解している」＋閉じた入口</dd><dt>伸びた理由</dt><dd>一見高そうな入口・長い通路・庭園で期待価格を上げ、天ぷらの技術を見せた後に13,000円を公開。先入観が反転する。</dd><dt>徳への転用</dt><dd>一軒家外観→静かな店内→炭火→価格の順でほぼ再現可能。庭園・創業物語はコピーしない。</dd><dt>再現性</dt><dd class="stars">★★★★★</dd><dt>推奨企画</dt><dd>「高そう。でも、1万円台で旬を味わう」</dd></dl><details open><summary>詳細分析</summary><p><b>映像：</b>着物姿、入口、奥行き、日本庭園、天ぷら調理、会席。<br><b>店舗要因：</b>昭和8年創業、天ぷら会席、数寄屋造りは店舗公開情報でも確認。<br><b>感情：</b>知らなかった、特別な日に行きたい、誰かに送りたい。<br><b>CTA：</b>席別価格（4,500円／8,800円／13,000円）と「行ってみて」で来店を具体化。<br><b>リスク：</b>コメントには「13,000円は高い」という反応もあり、“安い”断定は分断を招く。徳では値ごろ感ではなく内容の納得へ。</p></details><p><a href="https://www.instagram.com/omame.kyoto/reel/DdLchxfpE0M/" target="_blank" rel="noopener">Instagram投稿を開く ↗</a></p></div></article>
+      </div>
+    </section>
+
+    <section id="patterns">
+      <div class="section-head"><div><span class="kicker">04 / SUCCESS FACTORS</span><h2>完全一致投稿の成功要因</h2></div><p>天㐂の1投稿から抽出した転用仮説です。複数投稿を横断した統計ではありません。</p></div>
+      <div class="grid grid-3">
+        <div class="card pattern"><div class="n">01</div><h3>期待差をつくる</h3><p>「高そう→意外と選べる」「知らない→実は名店」。続きを見る理由を最初の2秒に置く。</p><div class="bar"><i style="width:96%"></i></div><b>徳への適合：最重要</b></div>
+        <div class="card pattern"><div class="n">02</div><h3>動く料理を先に</h3><p>煙、炎、注ぐ、割る、盛る。説明より前に“変化”を見せると、無音でも意味が通る。</p><div class="bar"><i style="width:92%"></i></div><b>徳への適合：高</b></div>
+        <div class="card pattern"><div class="n">03</div><h3>価格は価値の後</h3><p>高価格帯では、技術・旬・空間を見せてから価格を開示。安さではなく納得を作る。</p><div class="bar"><i style="width:90%"></i></div><b>徳への適合：高</b></div>
+        <div class="card pattern"><div class="n">04</div><h3>京都の証拠</h3><p>一軒家、路地、器、静かなカウンター、季節。抽象的な「京都らしい」より具体映像。</p><div class="bar"><i style="width:86%"></i></div><b>徳への適合：高</b></div>
+        <div class="card pattern"><div class="n">05</div><h3>保存の実用情報</h3><p>予算、最寄り、予約、コース、誰と行くか。動画の後半で来店判断を完成させる。</p><div class="bar"><i style="width:82%"></i></div><b>徳への適合：高</b></div>
+        <div class="card pattern"><div class="n">06</div><h3>二択で会話を作る</h3><p>日本酒かワインか、炭火魚か和牛か。好みを問うCTAはコメントの心理負担が低い。</p><div class="bar"><i style="width:74%"></i></div><b>徳への適合：中〜高</b></div>
+      </div>
+    </section>
+
+    <section id="transfer">
+      <div class="section-head"><div><span class="kicker">05 / TRANSFER RANKING</span><h2>和食 徳への転用ランキング</h2></div><p>店舗の公開要素と撮影可能性で評価。</p></div>
+      <div class="grid grid-2">
+        <div class="card"><div class="rank"><div class="rankno">1</div><div><h3>入口の先入観 → 価格の反転</h3><span class="stars">★★★★★</span></div></div><p>天㐂の構造を、徳の一軒家・静かな空間・1万円台へ。庭園や創業物語は借りない。</p></div>
+        <div class="card"><div class="rank"><div class="rankno">2</div><div><h3>炭火の動き → 一皿の完成</h3><span class="stars">★★★★★</span></div></div><p>炎・皮目・煙・盛付けが揃う。徳の公開メニューとの一致度が最も高い。</p></div>
+        <div class="card"><div class="rank"><div class="rankno">3</div><div><h3>コース全景 → 価格納得</h3><span class="stars">★★★★☆</span></div></div><p>9品を短く章立てし、量ではなく季節の展開を見せる。実際の当日内容で撮る。</p></div>
+        <div class="card"><div class="rank"><div class="rankno">4</div><div><h3>料理×日本酒/ワイン二択</h3><span class="stars">★★★★☆</span></div></div><p>公開されているドリンク幅をコメント企画へ。銘柄・ペアリング理由は店側監修必須。</p></div>
+      </div>
+    </section>
+
+    <section id="plans">
+      <div class="section-head"><div><span class="kicker">06 / REEL CONCEPTS</span><h2>推奨リール企画</h2></div><p>撮影当日の品名・価格を最終確認してから公開。</p></div>
+      <div class="grid grid-2">
+        <article class="card plan"><span class="pill exact">優先度 1</span><h3>高そう。でも、1万円台で旬を味わう</h3><p><b>参考：</b>天㐂（33.6万再生）</p><div class="hook">0〜3秒：閉じた外観 → 炭火の炎<br>テロップ「京都・紫野。高そうで入りづらい？ でも…」</div><p><b>狙い：</b>入店心理の壁を、料理の証拠と価格の納得で反転。<br><b>ターゲット：</b>30〜50代、記念日・会食・京都らしい夜を探す人。<br><b>撮る料理：</b>当日提供の炭火魚、季節の前菜、刺身、締め。<br><b>撮る空間：</b>外観、扉、カウンター、料理人の手元、座敷。</p><div class="ab"><div><b>Aフック</b><br>「高そうで、入れないと思ってた」</div><div><b>Bフック</b><br>「京都の夜、1万円台ならここ」</div></div><p><b>本文方向：</b>立地→一軒家→旬→炭火→予算→予約導線。<br><b>CTA：</b>「次の特別な夜のために保存」<br><b>伸びる仮説：</b>先入観の反転が視聴継続を作り、価格と用途が保存を作る。</p></article>
+        <article class="card plan"><span class="pill fact">優先度 2</span><h3>この音、京都の夜が始まる</h3><p><b>展開元：</b>完全一致投稿の調理工程・シズル表現</p><div class="hook">0〜3秒：炭が爆ぜる音 → 皮目アップ<br>テロップ「音ありで見て。炭火の一皿」</div><p><b>狙い：</b>ASMRと炎でスクロールを止め、技術を説明なしで証明。<br><b>ターゲット：</b>食材・調理を重視する美食層。<br><b>撮る料理：</b>撮影日に提供する甘鯛・のどぐろ等の炭火料理。<br><b>撮る空間：</b>炭台、手元、器、仕上げ、客席へ届く瞬間。</p><div class="ab"><div><b>Aフック</b><br>炎を0.0秒から</div><div><b>Bフック</b><br>完成皿→焼き場へ逆再生</div></div><p><b>本文方向：</b>食材名、火入れの意図、当日の提供可否。<br><b>CTA：</b>「炭火魚と和牛、どちらを選ぶ？」<br><b>伸びる仮説：</b>視覚・聴覚の即時刺激と二択CTAが相性良い。</p></article>
+        <article class="card plan"><span class="pill fact">優先度 3</span><h3>おまかせ9品、15秒で全部見せます</h3><p><b>展開元：</b>完全一致投稿の会席構成・価格納得</p><div class="hook">0〜3秒：9皿を0.3秒ずつフラッシュ<br>テロップ「京都の旬が、9回くる」</div><p><b>狙い：</b>1万円台の内容を可視化し、予約前の不安を減らす。<br><b>ターゲット：</b>料金に対する内容を重視する会食・記念日層。<br><b>撮る料理：</b>実際のおまかせ9品。固定画角で一皿ずつ。<br><b>撮る空間：</b>冒頭か末尾に外観とカウンター各1カット。</p><div class="ab"><div><b>Aフック</b><br>9皿フラッシュ</div><div><b>Bフック</b><br>最も強い皿→全体</div></div><p><b>本文方向：</b>季節で変わる旨、予約方法、価格は最新ページを案内。<br><b>CTA：</b>「誰と行きたい？送って相談」<br><b>伸びる仮説：</b>内容透明性が保存・送信と予約検討を後押し。</p></article>
+        <article class="card plan"><span class="pill fact">優先度 4</span><h3>今夜は日本酒？ワイン？</h3><p><b>参考：</b>二択CTA＋具体選択肢の成功構造</p><div class="hook">0〜3秒：同じ一皿の左右に二杯<br>テロップ「あなたなら、どっち？」</div><p><b>狙い：</b>コメントを自然に増やし、徳のドリンク幅を伝える。<br><b>ターゲット：</b>ペアリング好き、同伴者と店を選ぶ人。<br><b>撮る料理：</b>当日店が薦める一皿。<br><b>撮る空間：</b>注ぐ手元、酒器とグラス、カウンター。</p><div class="ab"><div><b>Aフック</b><br>日本酒 vs ワイン</div><div><b>Bフック</b><br>魚 vs 和牛</div></div><p><b>本文方向：</b>両方の相性を料理人・サービス側の言葉で短く。<br><b>CTA：</b>「日本酒は🍶、ワインは🍷でコメント」<br><b>伸びる仮説：</b>答えやすい設問が会話を生み、店の間口を広げる。</p></article>
+      </div>
+    </section>
+
+    <section id="shoot">
+      <div class="section-head"><div><span class="kicker">07 / SHOOTING SCRIPT</span><h2>撮影指示書｜優先度1</h2></div><p>完成尺15秒、縦9:16、24/30fps。炎・湯気は60fpsも併撮。</p></div>
+      <div class="card table-wrap">
+        <table class="timeline-table"><thead><tr><th>時間</th><th>画</th><th>テロップ / 音</th><th>撮影指示</th></tr></thead><tbody>
+          <tr><td>0.0–0.7秒</td><td>最強の炭火シズル</td><td>炭が爆ぜる生音</td><td>火を画面下1/3、料理を中央。露出固定、0.5倍ではなく1倍。</td></tr>
+          <tr><td>0.7–1.6秒</td><td>外観・入口</td><td>「京都・紫野。」</td><td>夕方〜夜。通行人・車を避け、店名が読める1カット。</td></tr>
+          <tr><td>1.6–3.0秒</td><td>扉→店内</td><td>「高そうで入りづらい？ でも…」</td><td>扉を開く動きでトランジション。実際の導線だけを撮る。</td></tr>
+          <tr><td>3.0–4.4秒</td><td>季節の前菜</td><td>「旬から始まり」</td><td>45度、器全景→食材の寄りを同一方向にパン。</td></tr>
+          <tr><td>4.4–5.8秒</td><td>刺身の包丁・盛付け</td><td>「手仕事を目の前で」</td><td>手元のみ。顔を映す場合は本人同意。</td></tr>
+          <tr><td>5.8–7.4秒</td><td>炭火魚の皮目</td><td>食材名＋「炭火」</td><td>撮影当日の正式名を使用。湯気が背景に抜ける逆光。</td></tr>
+          <tr><td>7.4–8.8秒</td><td>完成皿を置く</td><td>「1万円台で味わう京都の夜」</td><td>“安い”は使わない。価格は税込/税別を店舗確認。</td></tr>
+          <tr><td>8.8–10.3秒</td><td>日本酒を注ぐ</td><td>「日本酒も、ワインも」</td><td>銘柄ラベルは提供可・許諾済みのみ。</td></tr>
+          <tr><td>10.3–11.8秒</td><td>カウンター・座敷</td><td>「大切な人との一夜に」</td><td>客の顔を映さない。空席時間に広角を1秒。</td></tr>
+          <tr><td>11.8–13.2秒</td><td>締めの一皿</td><td>「和食 徳｜京都・紫野」</td><td>箸上げは手前、店名は画面中央より上。</td></tr>
+          <tr><td>13.2–15.0秒</td><td>外観または暖簾</td><td>「次の特別な夜のために保存」</td><td>予約導線はプロフィールへ。2秒近く残して読ませる。</td></tr>
+        </tbody></table>
+      </div>
+      <div class="grid grid-3" style="margin-top:16px">
+        <div class="card"><h3>必要カット</h3><p>外観／扉／カウンター／座敷／季節前菜／包丁／炭火／皮目／盛付け／料理提供／酒注ぎ／締め。</p></div>
+        <div class="card"><h3>投稿本文</h3><p>紫野の立地→一軒家→旬と炭火→用途→当日価格→予約方法。冒頭2行で「高そう、でも」を回収。</p></div>
+        <div class="card"><h3>公開前チェック</h3><p>料理名、価格、税、品数、営業時間、予約条件、人物・ラベルの許諾、PR/タイアップ表記。</p></div>
+      </div>
+    </section>
+
+    <section id="action">
+      <div class="section-head"><div><span class="kicker">08 / ACTION PLAN</span><h2>最初の14日でやること</h2></div><p>まず1本を作り、学びを次の2本へ反映。</p></div>
+      <div class="grid grid-2">
+        <div class="card action"><div class="step">DAY<br>1–2</div><div><h3>事実と撮影日を確定</h3><p>当日コース、価格、撮影できる炭火料理、店内撮影時間、出演可否を確定。</p></div></div>
+        <div class="card action"><div class="step">DAY<br>3–5</div><div><h3>縦素材をまとめ撮り</h3><p>優先度1・2・3で共用できる12カットを撮影。各カット3テイク。</p></div></div>
+        <div class="card action"><div class="step">DAY<br>6–7</div><div><h3>A/B冒頭を2本作る</h3><p>本編は同一、最初の3秒だけ変更。店舗確認後に優先度1を公開。</p></div></div>
+        <div class="card action"><div class="step">DAY<br>8–14</div><div><h3>数字で改善</h3><p>3秒到達率、平均視聴時間、完了率、保存、シェア、プロフィール遷移、予約リンクを記録。</p></div></div>
+      </div>
+      <div class="card verdict" style="margin-top:16px"><b>判断基準：</b>再生だけでなく、保存率・シェア率・プロフィール遷移・予約導線のクリックを評価。コメントで「高い/安い」が割れたら、次作は価格先出しを弱め、料理の工程と用途を厚くします。</div>
+    </section>
+
+    <section id="sources">
+      <div class="section-head"><div><span class="kicker">09 / SOURCES & LIMITS</span><h2>出典と調査上の制約</h2></div><p>リンク先の表示値・メニューは変更される場合があります。</p></div>
+      <div class="grid grid-2">
+        <div class="card sources"><h3>店舗情報</h3><ul>
+          <li><a href="https://tabelog.com/kyoto/A2601/A260503/26031615/" target="_blank" rel="noopener">食べログ｜和食 徳</a></li>
+          <li><a href="https://tabelog.com/kyoto/A2601/A260503/26031615/dtlmenu/" target="_blank" rel="noopener">食べログ｜和食 徳 メニュー</a></li>
+          <li><a href="https://www.washoku-toku.jp/" target="_blank" rel="noopener">和食 徳 公式サイト</a></li>
+          <li><a href="https://www.instagram.com/toku_washoku/" target="_blank" rel="noopener">和食 徳 公式Instagram</a></li>
+          <li><a href="https://tabelog.com/kyoto/A2601/A260202/26001532/" target="_blank" rel="noopener">食べログ｜天㐂</a></li>
+        </ul></div>
+        <div class="card"><h3>制約</h3><p>Instagramの公開画面・検索結果で取得できる範囲を使用。完全な期間内全投稿をAPIで収集したものではなく、各指定アカウントの確認時点の公開リール15件を一次母集団としています。</p><p>「伸びた理由」は投稿で観察した映像・コピー・価格・CTAと公開反応からの<strong>分析仮説</strong>。アルゴリズム配信量、視聴維持率、保存数、シェア数など非公開の内部指標は確認できません。</p><p>全条件を満たした1件だけを掲載しています。</p></div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><div class="wrap"><strong>和食 徳 Instagram Reels Research</strong><br>公開情報をもとにした意思決定用レポート。最終公開前に店舗側で価格・メニュー・営業情報を再確認してください。</div></footer>
+  <script>
+    const buttons=[...document.querySelectorAll('[data-filter]')];
+    const posts=[...document.querySelectorAll('[data-kind]')];
+    buttons.forEach(btn=>btn.addEventListener('click',()=>{buttons.forEach(b=>b.classList.remove('active'));btn.classList.add('active');const f=btn.dataset.filter;posts.forEach(p=>p.hidden=f!=='all'&&p.dataset.kind!==f)}));
+  </script>
+</body>
+</html>
