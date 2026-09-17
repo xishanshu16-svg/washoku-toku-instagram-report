@@ -2,14 +2,15 @@
 
 `index.html` だけで動く静的ダッシュボードです。外部JavaScript、フォント、画像アセットはありません。
 
-## Cloudflare Pages
+## Cloudflare Pages（Workers統合版）
 
-1. この `outputs` ディレクトリをGitHubリポジトリへ追加します。
-2. Cloudflare Pagesでリポジトリを接続します。
-3. Build commandは空欄、Build output directoryは `outputs` を指定します。
-4. デプロイ後、条件切替ボタン、Instagramリンク、スマートフォン幅を確認します。
+公開URL：<https://washoku-toku-instagram-report.xishanshu16.workers.dev>
 
-Direct Uploadを使う場合は、Cloudflare DashboardのWorkers & Pagesから `outputs` ディレクトリをアップロードできます。
+`wrangler.jsonc` の `assets.directory` で `outputs` を指定しています。更新時はリポジトリのルートで次を実行します。
+
+```sh
+npx wrangler deploy
+```
 
 ## ローカル確認
 

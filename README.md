@@ -9,8 +9,11 @@
 
 外部JavaScript、Webフォント、画像アセットを使わない単一HTML構成です。
 
-## Cloudflare Pages設定
+## Cloudflare公開
 
-- Build command: 空欄
-- Build output directory: `outputs`
+Cloudflare PagesのWorkers統合版で公開しています。
+
+- 公開URL: https://washoku-toku-instagram-report.xishanshu16.workers.dev
+- Static assets directory: `outputs`
 - Production branch: `main`
+- 更新コマンド: `npx wrangler deploy`
