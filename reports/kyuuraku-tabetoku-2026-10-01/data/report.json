@@ -1,0 +1,46 @@
+{
+  "report_id": "kyuuraku-tabetoku-2026-10-01",
+  "generated_at": "2026-10-01T00:00:00+09:00",
+  "period": {"start": "2026-08-01", "end": "2026-10-01"},
+  "account": {
+    "handle": "kyoto_tabetoku",
+    "display_name": "たべとく| 社会人が喜ぶ京都グルメ見つけてまう人",
+    "url": "https://www.instagram.com/kyoto_tabetoku/",
+    "followers_public": "23.3万人",
+    "posts_public": 916
+  },
+  "target_store": {
+    "name": "焼肉 久楽",
+    "tabelog_url": "https://tabelog.com/kyoto/A2601/A260601/26016588/",
+    "instagram_url": "https://www.instagram.com/yakiniku_kyuuraku/",
+    "public_budget": "6,000〜7,999円",
+    "omakase_from_yen": 5500,
+    "nearest": ["竹田駅 徒歩5分", "藤森駅 徒歩8分"]
+  },
+  "population": {
+    "reels": 51,
+    "views_average": 243549,
+    "views_median": 213000,
+    "views_min": 93000,
+    "views_max": 699000
+  },
+  "top10_summary": {
+    "views_average": 475200,
+    "views_median": 460500,
+    "likes_total": 39856,
+    "comments_total": 376
+  },
+  "top10": [
+    {"rank":1,"code":"Db5wojWzLA-","restaurant":"京ラーメン 壬生 さだかず","published":"2026-08-11","views":699000,"likes":6341,"comments":47},
+    {"rank":2,"code":"Dcqr3UXTPD7","restaurant":"かたぱん屋 亀井商店","published":"2026-08-30","views":528000,"likes":3865,"comments":15},
+    {"rank":3,"code":"DdeLQ54TTD6","restaurant":"京都離宮 おだしとだしまき","published":"2026-09-19","views":527000,"likes":5329,"comments":32},
+    {"rank":4,"code":"Dc0_SPPThcz","restaurant":"本家第一旭 三条河原町店","published":"2026-09-03","views":507000,"likes":3112,"comments":32},
+    {"rank":5,"code":"Ddtq9qETfK8","restaurant":"京都ヨドバシ新店2店舗","published":"2026-09-25","views":477000,"likes":3375,"comments":21},
+    {"rank":6,"code":"DbnvqqaTJVK","restaurant":"京都の絶品ステーキ3選","published":"2026-08-04","views":444000,"likes":4158,"comments":55},
+    {"rank":7,"code":"Db8VhkOzDzT","restaurant":"但馬屋 京都ヨドバシ店","published":"2026-08-12","views":398000,"likes":3144,"comments":15},
+    {"rank":8,"code":"DcThlPVTBxX","restaurant":"百万遍ランチ3選","published":"2026-08-21","views":397000,"likes":3870,"comments":40},
+    {"rank":9,"code":"Ddoeo2FTOmD","restaurant":"博多長浜ラーメン みよし","published":"2026-09-23","views":389000,"likes":3143,"comments":68},
+    {"rank":10,"code":"DcbP2nczdTK","restaurant":"すしてつ 先斗町店","published":"2026-08-24","views":386000,"likes":3519,"comments":51}
+  ],
+  "method_note": "Instagram公開リール一覧で期間内51本を確認し、公開再生数で順位化。TOP10は投稿詳細で本文、いいね、コメント、公開日時を再確認。保存、シェア、維持率は非公開のため取得不可。"
+}
