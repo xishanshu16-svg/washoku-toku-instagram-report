@@ -1,0 +1,6 @@
+{
+  "name": "uoya-osaka-influencer-report",
+  "compatibility_date": "2026-10-11",
+  "assets": { "directory": "public" },
+  "observability": { "enabled": true }
+}
