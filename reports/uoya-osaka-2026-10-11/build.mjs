@@ -7,8 +7,10 @@ import {observed} from './observed.mjs';
 import {extra} from './observed-extra.mjs';
 import {comparisons} from './comparisons.mjs';
 import {bundles} from './asset-import.mjs';
+import {prFit,dayOrder,nightOrder,renderDashboard,decorateDashboard} from './dashboard.mjs';
 Object.assign(boundaryNotes,{yuji_cafeosaka:['Db5fm3gpxHo','2026-08-11','Db29V_6p7g5',null],marokun_gourmet:['Db5nhaJzsxq','2026-08-11','Db3JM5zzCip','2026-08-10'],'osaka.sakaba____':['Db5LJOwtxXm','2026-08-11','Db2_alOtYWZ','2026-08-10']});
-meta.generated_at=new Date().toISOString();
+const priorReport=new URL('./data/report.json',import.meta.url);
+meta.generated_at=fs.existsSync(priorReport)?JSON.parse(fs.readFileSync(priorReport,'utf8')).meta.generated_at:new Date().toISOString();
 const dir=path.dirname(fileURLToPath(import.meta.url)),out=path.join(dir,'public'),data=path.join(dir,'data');
 fs.mkdirSync(path.join(out,'assets'),{recursive:true});fs.mkdirSync(data,{recursive:true});
 for(const [id,map] of bundles)for(const [code,name]of Object.entries(map)){
@@ -105,11 +107,12 @@ ${section('success','03 / SUCCESS HYPOTHESES','再現するのは、店選びの
 ${section('plans','04 / REEL & SHOOTING KIT','まず撮る3本。現場で使える指示書',`<p class="note">以下はうお家向けの新規提案です。元投稿の秒数分析ではありません。料理・税込価格・予約先を店舗で確認し、仮置き欄を全て差し替えてから制作・投稿してください。</p><div class="plans" style="margin-top:18px">${prPlans.map(planHtml).join('')}</div>`)}
 ${section('action','05 / ACTION PLAN','依頼前に揃えて、1本目を撮る',`<div class="data-grid"><div class="card"><span class="rank">まず</span><h3>店舗の現行内容を確定</h3><p>通常の握り・造り・天ぷら、2人分の注文例、税込総額、席、撮影許可、予約先を確認。過去価格や個室表現は使わない。</p></div><div class="card"><span class="rank">次に</span><h3>上位3名へ条件を相談</h3><p>南大阪・住之江の視聴者、近い海鮮店の7日後インサイト、PR費、二次利用、撮影日、共同投稿と広告の扱いを確認。今回は連絡・契約未実施。</p></div><div class="card"><span class="rank">投稿後</span><h3>再生と来店を別に測る</h3><p>優先1の22秒企画から開始。7日後数値を固定して記録し、実来店を任意の流入質問で把握。予算に対する来店価値で次を決める。</p></div></div>`)}
 ${section('evidence','06 / EVIDENCE','元データと調査の限界',`<div class="source-list"><a href="/data/report.json">15アカウント・掲載150投稿 JSON</a><a href="/data/coverage.json">全一覧候補・期間境界の証拠記録</a>${link(meta.store_url,'うお家・食べログ')}</div><p class="muted" style="margin-top:14px">確認日時：2026-10-11 JST（集約完了09:36以降）。公開表示値は概数。全150投稿の原動画を全編視聴しておらず、冒頭や音声・カット順・CTAの実観察分析は未完了。キャプションと数値による仮説分析、および次回の具体撮影提案を提供しています。各アカウントのTOP10は確認範囲内であり、未表示・削除・非公開の投稿は確認できません。</p>`)} `;
-fs.writeFileSync(path.join(out,'index.html'),shell('うお家 | 大阪インフルエンサー選定・リール戦略',rootHero,rootBody));
+fs.writeFileSync(path.join(out,'index.html'),decorateDashboard(shell('うお家 | 昼・夜PRのインフルエンサー選定',rootHero,renderDashboard(rootBody,reports,prPlans))));
+fs.writeFileSync(path.join(data,'pr-fit.json'),JSON.stringify({basis:'2026-10-11取得済みの公開情報を昼・夜別に再評価。提案者の定性評価、送客保証なし。',dayOrder,nightOrder,ratings:prFit},null,2));
 for(const rep of reports){const p=path.join(out,'accounts',rep.profile.username);fs.mkdirSync(p,{recursive:true});fs.writeFileSync(path.join(p,'index.html'),accountPage(rep));}
 const report={meta:{...meta,coverage,unavailable,total_screened:total,total_buzz:buzz},reports,plans:prPlans.map(p=>({...p,timeline:timeline(categories[p.cat])}))};
 fs.writeFileSync(path.join(data,'report.json'),JSON.stringify(report,null,2));
 fs.writeFileSync(path.join(data,'coverage.json'),JSON.stringify({meta,coverage,boundaryNotes,rows},null,2));
 fs.mkdirSync(path.join(out,'data'),{recursive:true});
-for(const f of fs.readdirSync(data).filter(f=>/\.scored\.json$/.test(f)||['report.json','coverage.json'].includes(f)))fs.copyFileSync(path.join(data,f),path.join(out,'data',f));
+for(const f of fs.readdirSync(data).filter(f=>/\.scored\.json$/.test(f)||['report.json','coverage.json','pr-fit.json'].includes(f)))fs.copyFileSync(path.join(data,f),path.join(out,'data',f));
 console.log(JSON.stringify({accounts:reports.length,screened:total,buzz,posts:reports.reduce((a,r)=>a+r.posts.length,0),images:fs.readdirSync(path.join(out,'assets')).length}));

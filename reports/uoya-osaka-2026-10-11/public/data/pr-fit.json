@@ -1,0 +1,189 @@
+{
+  "basis": "2026-10-11取得済みの公開情報を昼・夜別に再評価。提案者の定性評価、送客保証なし。",
+  "dayOrder": [
+    "tomo_tomo_tomo123",
+    "osaka_gurume_guide",
+    "kyari_gourmet",
+    "man_puku_gourmet",
+    "marokun_gourmet",
+    "yuji_cafeosaka",
+    "osaka_logtaro",
+    "kazuhiko_reidachs",
+    "osaka.gurugurume",
+    "uta_osaka",
+    "osaka_datelog",
+    "ten_osaka_date",
+    "fuu_date",
+    "osaka.sakaba____",
+    "waratabihu_hu"
+  ],
+  "nightOrder": [
+    "tomo_tomo_tomo123",
+    "man_puku_gourmet",
+    "osaka.sakaba____",
+    "uta_osaka",
+    "osaka_gurume_guide",
+    "marokun_gourmet",
+    "ten_osaka_date",
+    "osaka.gurugurume",
+    "kyari_gourmet",
+    "osaka_logtaro",
+    "osaka_datelog",
+    "kazuhiko_reidachs",
+    "fuu_date",
+    "waratabihu_hu",
+    "yuji_cafeosaka"
+  ],
+  "ratings": [
+    {
+      "username": "tomo_tomo_tomo123",
+      "day": 5,
+      "night": 5,
+      "dayReason": "定食・ランチの内容と価格を短く具体化する発信軸。住之江区コスモタワーの投稿もあり、近隣の昼ごはん候補を作る企画に向く。",
+      "dayCode": "DdWGs4YhPTn",
+      "dayEvidenceNote": "定食880円の投稿。昼の価格・内容と地域の接点を評価。",
+      "nightReason": "寿司・魚料理を普段使いの夜ごはんとして紹介しやすい。魚くみBARの握り紹介が近い。",
+      "nightCode": "Db-ky1BBi2v"
+    },
+    {
+      "username": "osaka_gurume_guide",
+      "day": 5,
+      "night": 4,
+      "dayReason": "料理名・セット内容・価格・来店情報を整理するランチ投稿が多い。通常の昼メニューを一食として見せる企画と好相性。",
+      "dayCode": "DdvVeKbMsFv",
+      "dayEvidenceNote": "肉吸い・卵かけめし1,350円の投稿。うお家の昼予算表示とは価格差があり、価格一致ではなく伝え方を評価。",
+      "nightReason": "寿司と天ぷらの具体的な紹介は合う。夜の酒場用途より食事中心の内容で依頼する。",
+      "nightCode": "DdlM2k5ReQX"
+    },
+    {
+      "username": "kyari_gourmet",
+      "day": 4,
+      "night": 3,
+      "dayReason": "和食御膳・小鉢・ランチの彩りを見せる投稿がある。安さ一辺倒でなく「昼の魚ごはん」の内容を訴求する企画向き。",
+      "dayCode": "DcvhDusPa-W",
+      "dayEvidenceNote": "璃泉の和食ランチ1,870円。御膳の見せ方の参考で、価格は一致しない。",
+      "nightReason": "大人デート軸は使えるが、ホテル最上階・高級コース・個室はうお家に転用できない。",
+      "nightCode": "DdQZRzIPMmA"
+    },
+    {
+      "username": "man_puku_gourmet",
+      "day": 4,
+      "night": 5,
+      "dayReason": "食事の満足感と価格を説明する力は高い。巨盛りや食べ放題を借りず、通常のランチ一式と実会計を見せる条件で候補。",
+      "dayCode": "DcS4SO2TiDu",
+      "dayEvidenceNote": "洋食の量・サイズ選択の紹介。昼の海鮮専門の直接事例ではない。",
+      "nightReason": "魚心の寿司とalmalioの刺身盛りを紹介。魚料理・酒場・価格の組み合わせが夜PRに近い。",
+      "nightCode": "DeJULiPTLGj"
+    },
+    {
+      "username": "marokun_gourmet",
+      "day": 4,
+      "night": 4,
+      "dayReason": "ランチの満足感や外観との意外性を伝える投稿がある。うお家では実際の昼の一皿を主役にし、食べ放題や歴史は借りない。",
+      "dayCode": "Db-8ZzUzLUe",
+      "dayEvidenceNote": "おにぎり・唐揚げの食べ放題ランチ1,780円。通常ランチへの構造転用であり、同条件ではない。",
+      "nightReason": "料理の具体性と実食レビューは向く。住之江で食べる理由を先に出し、広域の話題性に依存しない。",
+      "nightCode": "Dci_iWuTU5H"
+    },
+    {
+      "username": "yuji_cafeosaka",
+      "day": 3,
+      "night": 2,
+      "dayReason": "だし巻き重など昼の和食事例はある。ただしカフェ・空間中心の軸と低単価の日常ランチには距離があり、料理の実工程を撮れる場合に限定。",
+      "dayCode": "DcDyeSPppBx",
+      "dayEvidenceNote": "百花のだし巻き重。価格は取得不可で、うお家との価格相性は未確定。",
+      "nightReason": "カフェ中心の規模を夜の海鮮送客能力と同一視しない。寿司酒場の近い実績を本人に確認する必要がある。",
+      "nightCode": null
+    },
+    {
+      "username": "osaka_logtaro",
+      "day": 3,
+      "night": 3,
+      "dayReason": "定食の実食・待ち時間・接客などの実用情報は昼PRに応用できる。北河内から住之江への商圏差がある。",
+      "dayCode": "Dcae71uJq_O",
+      "dayEvidenceNote": "唐揚げ定食1,220円の実食紹介。地域と料理は異なる。",
+      "nightReason": "実食と居心地の評価は合うが北河内中心。酒場としての実際の使い方を確認してから依頼。",
+      "nightCode": "DcvD3gdp2FA"
+    },
+    {
+      "username": "kazuhiko_reidachs",
+      "day": 3,
+      "night": 2,
+      "dayReason": "日常ランチ・家族の利用条件を具体化できる。ただし北摂中心で、南大阪の視聴者比率は取得不可。",
+      "dayCode": "Dc507-IB1Xu",
+      "dayEvidenceNote": "町中華ランチ1,000円前後の投稿。地域・料理・当時特典は異なる。",
+      "nightReason": "北摂・家族中心の軸と住之江の夜の寿司飲みには距離がある。夜の地元客への到達は未確認。",
+      "nightCode": null
+    },
+    {
+      "username": "osaka.gurugurume",
+      "day": 3,
+      "night": 3,
+      "dayReason": "サイズ・価格・アクセスの明示は昼に使える。梅田・高槻中心の事例が多く、住之江ランチへの送客は別途確認。",
+      "dayCode": "DdgayKhN9bU",
+      "dayEvidenceNote": "ハンバーグランチS1,500円〜。価格・料理・地域は一致しない。",
+      "nightReason": "箱盛りの海鮮・角打ちの事例がある。梅田中心の地理的偏りを確認し、駅近と実会計を訴求。",
+      "nightCode": "Dc8wV4euJpA"
+    },
+    {
+      "username": "uta_osaka",
+      "day": 3,
+      "night": 4,
+      "dayReason": "パン・日常価格の料理も紹介しているが、低単価の魚ランチの近似実績は今回のTOP10では弱い。昼用の実績確認を前提に候補。",
+      "dayCode": "DdkXbY9zisV",
+      "dayEvidenceNote": "300円のクロワッサン紹介。ランチ定食の直接対照ではなく、価格説明の間接参考。",
+      "nightReason": "鮨laboまどゐ、ニューツルマツなど寿司・海鮮とお酒の用途が近い。食事量・会計まで見せる企画に向く。",
+      "nightCode": "Dcamp9fzwgM"
+    },
+    {
+      "username": "osaka_datelog",
+      "day": 2,
+      "night": 2,
+      "dayReason": "和食ランチの投稿はあるが、特別なデート・空間・おでかけが主軸。普段の昼ごはんPRでは優先度を下げる。",
+      "dayCode": null,
+      "dayEvidenceNote": "彩炉のランチ比較例は詳細ページに掲載。TOP10内の昼の近似事例は未確保。",
+      "nightReason": "落ち着いた食事の用途は一部使えるが、宿泊・非日常の大きな再生を夜の飲食送客に換算しない。",
+      "nightCode": "Dd809MhT_Rn"
+    },
+    {
+      "username": "ten_osaka_date",
+      "day": 2,
+      "night": 3,
+      "dayReason": "夜の大人デートが主軸で、今回の確認範囲では通常ランチの直接事例が弱い。昼PRは実績確認後の限定依頼。",
+      "dayCode": null,
+      "dayEvidenceNote": "今回のTOP10で、低単価ランチの近い事例は未確保。",
+      "nightReason": "大人の駅近ディナーという用途は近い。高層階・夜景・個室を外し、気軽な寿司デートに絞る。",
+      "nightCode": "DdgbeUchhqJ"
+    },
+    {
+      "username": "fuu_date",
+      "day": 2,
+      "night": 2,
+      "dayReason": "SEN℃の食投稿はあるが付属サービスや体験の満足感が主役。通常ランチへの転用は可能でも、特典はそのまま使えない。",
+      "dayCode": "DeFplDWyGPi",
+      "dayEvidenceNote": "メイン1,890円〜にパン等が付く投稿。うお家のサービス内容とは異なる。",
+      "nightReason": "旅行・体験中心の発信と普段の寿司酒場は距離がある。非日常の数字で送客を予測しない。",
+      "nightCode": null
+    },
+    {
+      "username": "osaka.sakaba____",
+      "day": 2,
+      "night": 5,
+      "dayReason": "酒場・寿司飲み中心で夜の用途との接点が強い。海鮮の紹介力はあるが、通常ランチの価格・昼の利用動機に近い事例は未確保。",
+      "dayCode": null,
+      "dayEvidenceNote": "寿司酒場の実績は夜評価へ使用。昼ランチの直接事例は今回未確保。",
+      "nightReason": "寿司・造り・天ぷらとお酒を組み合わせる発信が近い。食堂みづ木や亀すしの実投稿が根拠。",
+      "nightCode": "DcDfeEIN2gj"
+    },
+    {
+      "username": "waratabihu_hu",
+      "day": 1,
+      "night": 2,
+      "dayReason": "旅行・ホテル・イベントが中心。低単価の日常ランチへ来てもらう目的の直接実績は今回未確保。",
+      "dayCode": null,
+      "dayEvidenceNote": "宿泊に付く飲食特典は、一般飲食店ランチの対照として使わない。",
+      "nightReason": "広域おでかけの帰り道という用途に限定。宿泊・イベントの再生数は夜の飲食送客の証拠ではない。",
+      "nightCode": null
+    }
+  ]
+}
