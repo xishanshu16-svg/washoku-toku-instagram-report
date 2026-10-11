@@ -1,3 +1,4 @@
+import {renderExamples} from './examples.mjs';
 // 相性は公開投稿の題材・価格・地域との接点に基づく提案者評価。送客・地域リーチの実績値ではない。
 export const prFit = [
  ['tomo_tomo_tomo123',5,5,'定食・ランチの内容と価格を短く具体化する発信軸。住之江区コスモタワーの投稿もあり、近隣の昼ごはん候補を作る企画に向く。','DdWGs4YhPTn','定食880円の投稿。昼の価格・内容と地域の接点を評価。','寿司・魚料理を普段使いの夜ごはんとして紹介しやすい。魚くみBARの握り紹介が近い。','Db-ky1BBi2v'],
@@ -50,8 +51,7 @@ export function renderDashboard(oldBody,reports,plans){
  const action=extract(oldBody,'action').replace('通常の握り・造り・天ぷら、2人分の注文例、税込総額、席、撮影許可、予約先を確認。','昼の現行ランチ内容・税込価格・提供日、夜の握り・造り・天ぷらと2人分の注文総額、席、撮影許可、予約先を確認。').replace('上位3名へ条件を相談','昼・夜それぞれの上位候補に相談').replace('近い海鮮店の7日後インサイト','近いランチ／海鮮店の7日後インサイト').replace('優先1の22秒企画から開始。7日後数値を固定して記録し、実来店を任意の流入質問で把握。','昼20秒・夜22秒の企画を別投稿で開始。7日後数値を固定して記録し、昼・夜の実来店を任意の流入質問で分けて把握。');
  const evidence=extract(oldBody,'evidence').replace('<a href="/data/coverage.json">','<a href="/data/pr-fit.json">昼・夜別の相性評価 JSON</a> <a href="/data/coverage.json">');
  const overview=`<nav class="overview-nav" aria-label="概要の中の項目"><a href="#summary">概要</a><span>→</span><a href="#success">成功要因</a><span>→</span><a href="#concepts">企画</a><span>→</span><a href="#shoots">撮影指示書</a></nav>${summary}${success}${concepts}${shoots}${action}${evidence}`;
- const lunchExamples=block('lunch-cases','DAY PR / REFERENCES','昼の近似事例｜定食・御膳の伝え方',`<p class="muted">昼ランキング上位3名の実投稿。価格一致や全動画の観察ではなく、公開キャプションにある一食の内容・価格の伝え方を参照します。10万再生未満の投稿も参考として区別。</p><div class="grid">${dayOrder.slice(0,3).map(h=>{const f=fitFor(h),r=reportFor(h),p=postFor(f.dayCode);return `<article class="card"><span class="rank">${e(p.views_display)} 再生 · ${p.views>=100000?'10万再生以上':'参考投稿／10万未満'}</span><h3>${e(p.store)}</h3><p>${e(r.profile.name)}<br>${external(p.url,'元投稿')}</p><p>${e(p.caption_summary)}</p><small>投稿記載価格：${e(p.posted_price)}<br>いいね ${e(p.likes)} · コメント ${e(p.comments)}</small><p>昼への転用：${e(f.dayReason)}</p><p class="note">${e(f.dayEvidenceNote)}</p></article>`}).join('')}</div>`);
- const tabs=[['overview','概要',overview],['day','昼PR',ranking('day')],['night','夜PR',ranking('night')],['examples','近似事例',lunchExamples+extract(oldBody,'cases')]];
+ const tabs=[['overview','概要',overview],['day','昼PR',ranking('day')],['night','夜PR',ranking('night')],['examples','近似事例',renderExamples(reports)]];
  return `<div class="tabs-toolbar"><div class="tabs" role="tablist" aria-label="レポートの表示切替">${tabs.map(([id,name],i)=>`<button type="button" id="tab-${id}" role="tab" aria-controls="panel-${id}" aria-selected="${i===0}" tabindex="${i===0?0:-1}" data-tab="${id}"><span class="tab-index">0${i+1}</span>${name}${i===1||i===2?'<small>ランキング</small>':''}</button>`).join('')}</div></div>${tabs.map(([id,name,body],i)=>`<div id="panel-${id}" role="tabpanel" aria-labelledby="tab-${id}" tabindex="0" ${i?'hidden':''}>${body}</div>`).join('')}<noscript><p class="note">タブ切替にはJavaScriptが必要です。各アカウントの詳細レポートは概要内のリンクから閲覧できます。</p></noscript>`;
 }
 export const motionMarkup=`<div class="motion-bg" aria-hidden="true"><div class="motion-orb orb-red"></div><div class="motion-orb orb-amber"></div><div class="motion-grid"></div><svg class="motion-rings" viewBox="0 0 1200 900" fill="none"><circle cx="980" cy="160" r="310"/><circle cx="980" cy="160" r="390"/><circle cx="980" cy="160" r="470"/><path d="M-100 750Q400 400 1300 740M-100 800Q500 250 1300 850"/></svg></div>`;
@@ -60,7 +60,7 @@ export const dashboardCSS=`
 `;
 export const dashboardScript=`<script>
 (()=>{const tabs=[...document.querySelectorAll('[role="tab"]')],panels=[...document.querySelectorAll('[role="tabpanel"]')];
-const routes={overview:'overview',summary:'overview',success:'overview',concepts:'overview',plans:'overview',shoots:'overview',action:'overview',evidence:'overview',day:'day','day-ranking':'day',night:'night',fit:'night','night-ranking':'night',examples:'examples',cases:'examples'};
+const routes={overview:'overview',summary:'overview',success:'overview',concepts:'overview',plans:'overview',shoots:'overview',action:'overview',evidence:'overview',day:'day','day-ranking':'day',night:'night',fit:'night','night-ranking':'night',examples:'examples','examples-summary':'examples','lunch-cases':'examples',cases:'examples'};
 function select(id,focus=false){tabs.forEach(t=>{const on=t.dataset.tab===id;t.setAttribute('aria-selected',String(on));t.tabIndex=on?0:-1;if(on&&focus)t.focus()});panels.forEach(p=>p.hidden=p.id!=='panel-'+id)}
 function top(){document.querySelector('.tabs-toolbar').scrollIntoView({block:'start',behavior:'instant'})}
 function route(){let hash=location.hash.slice(1);try{hash=decodeURIComponent(hash)}catch{}select(routes[hash]||'overview');const target=document.getElementById(hash==='plans'?'shoots':hash);if(target&&target.tagName==='SECTION')requestAnimationFrame(()=>target.scrollIntoView({block:'start'}));else if(routes[hash])requestAnimationFrame(top);}

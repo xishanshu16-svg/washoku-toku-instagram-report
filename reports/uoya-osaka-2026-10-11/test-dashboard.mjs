@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {prFit,dayOrder,nightOrder,dashboardScript} from './dashboard.mjs';
+import {exampleSelections} from './examples.mjs';
 const html=fs.readFileSync(new URL('./public/index.html',import.meta.url),'utf8');
 const report=JSON.parse(fs.readFileSync(new URL('./data/report.json',import.meta.url),'utf8'));
 const posts=report.reports.flatMap(r=>r.posts);
@@ -20,5 +21,11 @@ for(const id of ['summary','success','concepts','shoots','day-ranking','night-ra
 assert.ok(html.includes('prefers-reduced-motion'));
 assert.ok(html.includes('motion-toggle'));
 assert.ok(!html.includes('undefined'));
+assert.equal(exampleSelections.length,10);
+assert.equal(new Set(exampleSelections.map(p=>p.code)).size,10);
+assert.equal(exampleSelections.filter(p=>p.meal==='day').length,4);
+assert.equal(exampleSelections.filter(p=>p.meal==='night').length,6);
+for(const s of exampleSelections)assert.ok(posts.some(p=>p.shortcode===s.code));
+assert.equal((html.match(/class="card example-card"/g)||[]).length,10);
 new Function(dashboardScript.replace(/^<script>\s*/,'').replace(/<\/script>$/,''));
-console.log('PASS: 4 tabs, 30 ranked cards, 4 shooting plans, all evidence links, valid script');
+console.log('PASS: 4 tabs, 30 ranked cards, 4 shooting plans, 10 unique examples (day 4 / night 6), evidence links, valid script');
