@@ -52,7 +52,7 @@ export const accounts=[
   fit:{gion:{night:4,reason:'和洋の創作料理、酒、大人女子会の説明が主力と近い。単品価格の記載も具体的。',caution:'根拠投稿は1.1万再生。相性の良さを大規模リーチの実績とは扱わない。'},yasaka:{night:4,reason:'創作和食を大人の会食として紹介。お任せコースの内容を一皿ずつ伝える依頼向き。',caution:'庭付き個室の直接実績は今回未確認。再生数より説明力を評価。'}}},
  {handle:'mimi_kyototabi',name:'みみ｜京都グルメ',followers:'9.6万人',posts:488,axis:'酒場中心・雰囲気と料理を両立',
   evidence:['DdK-lO8BKDY','DdQvSMuAgte','Ddfk7gVOrj4','DeBxqhOBFBr'],
-  fit:{gion:{night:5,reason:'町家酒場、旬の創作料理、お酒、予約導線の直接事例が複数。最も訴求の接点が多い。',caution:'Sudo.の6,600円や他店の土鍋ご飯を萬の内容へ流用しない。'},yasaka:{night:5,reason:'大人の隠れ家とコース価値の説明に強い接点。庭・個室を追加した会食PRの第一候補。',caution:'個室・庭の実撮影は店側と調整。実送客は未確認。'}}},
+  fit:{gion:{night:5,reason:'町家酒場、旬の創作料理、お酒、予約導線の直接事例が複数。最も訴求の接点が多い。',caution:'Sudo.の6,600円や他店の土鍋ご飯を萬の内容へ流用しない。'},yasaka:{night:5,reason:'大人の隠れ家とコース価値の説明に強い接点。庭・個室を追加した会食PRの有力候補。',caution:'個室・庭の実撮影は店側と調整。実送客は未確認。'}}},
  {handle:'mogu.on',name:'音｜京都グルメ',followers:'11.4万人',posts:778,axis:'カフェ・ランチ・ディナー、価格付き紹介',
   evidence:['DTxDtBFkQJJ'],
   fit:{gion:{night:4,reason:'煮野菜のコースと町家の飲食体験を具体化。野菜・旬料理・日本酒を見せる依頼に合う。',caution:'3,000円の他店コースは過去の投稿記載。萬6,000円の価値を独立して説明。'},yasaka:{night:3,reason:'野菜主体でも満足できるコースの紹介は応用可能。季節料理を主役にする依頼向き。',caution:'高単価の個室会食よりコスパ軸が強い。庭と会話の価値を追加する必要。'}}},
