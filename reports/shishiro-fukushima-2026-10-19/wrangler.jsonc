@@ -1,0 +1,6 @@
+{
+  "name": "shishiro-fukushima-pr-report",
+  "compatibility_date": "2026-10-19",
+  "assets": { "directory": "public" },
+  "observability": { "enabled": true }
+}
