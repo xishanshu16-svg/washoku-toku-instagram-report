@@ -21,7 +21,7 @@ details{margin-top:14px}summary{cursor:pointer;font-weight:bold}.fit-evidence{pa
 const tabs=[...document.querySelectorAll('[role="tab"]')],panels=[...document.querySelectorAll('[role="tabpanel"]')];
 const aliases={overview:'overview',day:tabs.some(t=>t.dataset.tab==='day')?'day':'overview',night:'night',examples:'examples',fit:'night',plans:'overview'};
 function select(id,focus=false){tabs.forEach(t=>{const active=t.dataset.tab===id;t.setAttribute('aria-selected',String(active));t.tabIndex=active?0:-1;if(active&&focus)t.focus()});panels.forEach(p=>p.hidden=p.id!=='panel-'+id)}
-function top(){document.querySelector('.tabs-toolbar').scrollIntoView({block:'start',behavior:'instant'})}
+function top(){document.querySelector('main').scrollIntoView({block:'start',behavior:'instant'})}
 function route(){let hash=location.hash.slice(1);try{hash=decodeURIComponent(hash)}catch{}const target=document.getElementById(hash==='plans'?'shoots':hash),parent=target?.closest('[role="tabpanel"]');const id=aliases[hash]||(parent?parent.id.replace('panel-',''):'overview');select(id);if(target&&target.getAttribute('role')!=='tabpanel'){const disclosure=target.closest('details');if(disclosure)disclosure.open=true;requestAnimationFrame(()=>target.scrollIntoView({block:'start'}))}else if(hash)requestAnimationFrame(top)}
 function change(tab,focus=false){select(tab.dataset.tab,focus);history.pushState(null,'','#'+tab.dataset.tab);top()}
 tabs.forEach((t,i)=>{t.addEventListener('click',()=>change(t));t.addEventListener('keydown',event=>{const positions={ArrowRight:(i+1)%tabs.length,ArrowLeft:(i-1+tabs.length)%tabs.length,Home:0,End:tabs.length-1};if(Object.hasOwn(positions,event.key)){event.preventDefault();change(tabs[positions[event.key]],true)}})});
