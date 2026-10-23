@@ -9,7 +9,7 @@
       "max": 5000,
       "currency": "JPY"
     },
-    "scope": "指定5名のプロフィールを追加スクロール調査し、各88件・計440件のURLと本文表示候補を保持（既調査との重複を含む、リール以外も含む）。前回のリール一覧115候補・詳細13ページも再選別。全編視聴0件。全投稿・全期間の網羅調査ではありません。",
+    "scope": "指定5名の前回440件の本文候補・115リール一覧候補の調査を土台に、今回、通常予算4,000〜5,000円の居酒屋全般へ拡大。公開検索と公式4店舗のタグ付き一覧、追加発信者プロフィールから9投稿の詳細を追加確認。現在はリール5件・写真補助5件。全編視聴0件。全投稿・全期間を網羅していません。",
     "method": "Instagramの既存ログイン状態で、指定URLと公開投稿へ直接アクセス。おすすめフィード・個人の閲覧履歴は選定に使用せず、プロフィール／一覧の表示サンプルから料理と夜用途を照合。店舗は食べログ・公式Instagram・ホットペッパーを照合。",
     "limits": "再生・フォロワーは公開の丸め表示。保存・共有・視聴維持率・視聴者地域・実送客・PR費は取得不可。反応の大小は来店や好意の証明ではありません。冒頭映像・カット順・音声は未確認で、勝因は本文からの仮説です。",
     "timeNote": "今回の想定客単価は4,000〜5,000円。期間指定なし。単品・宴会コース料金だけで通常の客単価一致としません。掲載予算・実会計・投稿時の価格を区別し、媒体間の差は明示します。"
@@ -86,18 +86,19 @@
       "profilePosts": 1122,
       "axis": "栃木県の店とスポット、料理ごとの価格説明",
       "evidence": [
-        "DeqyJI0TSbn"
+        "DeqyJI0TSbn",
+        "DIgJehOyAeq"
       ],
       "night": {
         "score": 4,
-        "reason": "海鮮・焼き魚を夜の料理として価格付きで紹介。5名の確認範囲では最も直接的。ただし通常予算の媒体差が残るため、発注確定ではなく第一相談候補。",
+        "reason": "海鮮・焼き魚の直接例に加え、掲載予算4,001〜5,000円のルタンブルで、名物料理・食感・単品料金を説明したリールも確認。第一相談候補とし、壺亭の通常総額と送客実績は依頼前に確認する。",
         "axes": [
           "刺身・さんま・夜限定串という具体的な魚介の根拠がある。浜焼きそのものの実績とは区別。",
           "昼夜併記だが夜限定料理を明示。壺亭では成人の友人・宴会へ絞る。",
-          "食べログ4,000〜4,999円と、ぐるなび通常3,000円が併存。一致実績を断定せず、本人へ4,000〜5,000円の実例を確認。",
+          "源天は媒体差あり。追加確認のルタンブルはホットペッパー掲載4,001〜5,000円。投稿記載の単品料金と実会計は別の値。",
           "源天は下野市。県内の海鮮接点はあるが、宇都宮駅東口の閲覧・予約成果は取得不可。"
         ],
-        "rankReason": "相談順1位。料理の直接性と人数・価格の具体性を優先した定性判断。媒体差があるため前回5点から4点へ下げた。12.3万再生は公開表示だが、共同投稿・PR条件や反応の内容も異なり、来店保証ではない。",
+        "rankReason": "相談順1位。源天の海鮮紹介と、今回追加した同価格帯のビストロ酒場紹介の両方を根拠に、主力料理と料金を伝える具体性を評価。ルタンブルの再生は取得不可で、いいね1,084件から再生や予約数を推測しない。4点は送客の保証ではない。",
         "brief": "浜焼きの焼き上がり→通常の刺身・盛り→人数と現行料金→東口の入口と予約。",
         "caution": "同じ炭火設備・産地・魚種・価格とは限らない。元店の情報や最上級表現を流用しない。",
         "ask": "通常の飲料込み4,000〜5,000円で海鮮を紹介した最近のリールを複数、実会計の内訳、PR費、宇都宮の閲覧地域、商用利用範囲、字幕確認。"
@@ -194,6 +195,38 @@
       }
     }
   ],
+  "extraCreators": [
+    {
+      "handle": "momo_nasi",
+      "name": "@momo_nasi",
+      "followers": null
+    },
+    {
+      "handle": "tochi_bow",
+      "name": "とちぼー",
+      "followers": "1,126人"
+    },
+    {
+      "handle": "a_san_sub",
+      "name": "@a_san_sub",
+      "followers": null
+    },
+    {
+      "handle": "nasu_guru",
+      "name": "なすぐる🐄那須グルメ・カフェ",
+      "followers": "4.5万人"
+    },
+    {
+      "handle": "sayaka.508",
+      "name": "@sayaka.508",
+      "followers": null
+    },
+    {
+      "handle": "nagateku_hoteguru",
+      "name": "ホテぐる（企業メディア）",
+      "followers": null
+    }
+  ],
   "posts": [
     {
       "code": "DeqyJI0TSbn",
@@ -228,7 +261,414 @@
       "budgetSource": "https://tabelog.com/tochigi/A0902/A090203/9008996/",
       "budgetAlternative": "https://r.gnavi.co.jp/11c09r8j0000/",
       "officialSource": "https://sakana-genten.com/",
-      "budgetNote": "食べログは旧表記「本気家 源天 本店」。住所・電話は魚食処源天の公式と一致。ただし媒体間の予算差と表記更新差があるため、現行の一人会計4,000〜5,000円を保証せず、条件完全一致には数えない。"
+      "budgetNote": "食べログは旧表記「本気家 源天 本店」。住所・電話は魚食処源天の公式と一致。ただし媒体間の予算差と表記更新差があるため、現行の一人会計4,000〜5,000円を保証せず、条件完全一致には数えない。",
+      "format": "リール",
+      "budgetBasis": "conflicting_listing",
+      "near": "刺身・焼き魚・焼き物、夜の居酒屋利用。",
+      "difference": "下野市の店舗。浜焼きそのものの実績ではなく、通常予算に媒体差がある。"
+    },
+    {
+      "restaurant": "Le Timbre（ルタンブル）",
+      "budget": "4,001〜5,000円（ホットペッパー掲載予算）",
+      "budgetSource": "https://www.hotpepper.jp/strJ003532035/",
+      "officialSource": "https://www.instagram.com/letimbre_utsunomiya/",
+      "budgetNote": "店舗の現在の掲載予算で選定。投稿者の一人実会計・当時の総額は取得不可。単品合計を人数不明のまま割り戻さない。",
+      "near": "宇都宮の夜、炭焼き料理と一杯、友人同士の食事という接点。",
+      "difference": "洋風ビストロ酒場で、料理・ワイン・空間は壺亭の浜焼きとは違う。",
+      "code": "DIgJehOyAeq",
+      "handle": "tochigi_gourmet1",
+      "format": "リール",
+      "likes": 1084,
+      "comments": 3,
+      "pr": "タイアップ表示を確認",
+      "publishedLabel": "2025-04-16",
+      "menuPrice": "エビ4尾1,280円／スペアリブ半量2,080円／季節フルーツとチーズ1,580円等（投稿記載）",
+      "tags": [
+        "看板料理",
+        "食感の違い",
+        "単品料金"
+      ],
+      "transferScore": 4,
+      "observed": "看板のエビ料理と炭焼き肉を、調理の特徴・食感・単品料金で説明。店舗公式で営業時間確認を勧める。",
+      "hypothesis": "単なるおいしさの評価だけでなく、何を注文するかを想像できる説明が検討を助ける可能性。",
+      "transfer": "壺亭の浜焼きと刺身を主役に、焼き上がり・食感・通常量・税込料金を別々に案内。",
+      "avoid": "生のアヒージョ・肉料理・青い空間・他店価格を流用しない。",
+      "planId": "night-hamayaki",
+      "views": null,
+      "viewsDisplay": "取得不可",
+      "actualSpend": null,
+      "checkedAt": "2026-10-23",
+      "budgetCheckedAt": "2026-10-23",
+      "budgetRange": {
+        "min": 4000,
+        "max": 5000
+      },
+      "qualification": "店舗の掲載予算が条件内／投稿者の実会計は未確認",
+      "budgetBasis": "restaurant_listing",
+      "url": "https://www.instagram.com/tochigi_gourmet1/reel/DIgJehOyAeq/",
+      "meal": "夜",
+      "fullVideoObserved": false,
+      "hook": "冒頭0〜3秒・実映像・音声は未確認。本文のみを分析。",
+      "alternative": "再生数・保存・共有・実送客は取得不可。投稿経過期間、料理、発信者規模、PR条件が異なるため反応の差を因果としない。"
+    },
+    {
+      "restaurant": "串焼きかめや 池上町本店",
+      "budget": "4,001〜5,000円（ホットペッパー掲載予算）",
+      "budgetSource": "https://www.hotpepper.jp/strJ003559843/",
+      "budgetAlternative": "https://tabelog.com/tochigi/A0901/A090101/9000426/",
+      "officialSource": "https://www.instagram.com/kameya_utsunomiya/",
+      "budgetNote": "食べログ掲載予算も4,000〜4,999円。一方、口コミ集計は5,000〜5,999円。掲載帯の一致であり、注文内容や投稿者実会計が必ず範囲内という意味ではない。",
+      "near": "宇都宮の夜の居酒屋、焼き物、友人・宴会の利用。",
+      "difference": "主役は肉巻き串。浜焼きや海鮮の実績と同一視しない。",
+      "code": "Cz0tpKdSZH_",
+      "handle": "momo_nasi",
+      "format": "リール",
+      "likes": null,
+      "comments": 6,
+      "pr": "#PRを確認",
+      "publishedLabel": "2023-11-19",
+      "menuPrice": null,
+      "tags": [
+        "居酒屋",
+        "夜の営業",
+        "予約情報"
+      ],
+      "transferScore": 3,
+      "observed": "串焼き店を紹介し、本文に住所・夜の営業・予約可否・PR表記をまとめる。料理価格の記載は確認できず。",
+      "hypothesis": "来店前に必要な情報を一か所にまとめる構成は参考になるが、この投稿が伸びたと数値では断定できない。",
+      "transfer": "通常の浜焼きの動画の最後に、東口・現行営業・一人予算・予約先を整理する。",
+      "avoid": "元投稿の古い営業時間、串の料理、再生未取得なのにバズと呼ぶこと。",
+      "planId": "night-organizer",
+      "views": null,
+      "viewsDisplay": "取得不可",
+      "actualSpend": null,
+      "checkedAt": "2026-10-23",
+      "budgetCheckedAt": "2026-10-23",
+      "budgetRange": {
+        "min": 4000,
+        "max": 5000
+      },
+      "qualification": "店舗の掲載予算が条件内／投稿者の実会計は未確認",
+      "budgetBasis": "restaurant_listing",
+      "url": "https://www.instagram.com/momo_nasi/reel/Cz0tpKdSZH_/",
+      "meal": "夜",
+      "fullVideoObserved": false,
+      "hook": "冒頭0〜3秒・実映像・音声は未確認。本文のみを分析。",
+      "alternative": "再生数・保存・共有・実送客は取得不可。投稿経過期間、料理、発信者規模、PR条件が異なるため反応の差を因果としない。"
+    },
+    {
+      "restaurant": "串焼きかめや（駅前店・池上本店を案内）",
+      "budget": "4,000〜4,999円（食べログ掲載予算）",
+      "budgetSource": "https://tabelog.com/tochigi/A0901/A090101/9022618/",
+      "officialSource": "https://www.instagram.com/kameya_ekimae/",
+      "budgetNote": "本文は両支店を案内し、撮影支店は未特定。駅前店の掲載予算4,000〜4,999円と、本店のホットペッパー4,001〜5,000円を確認。両店とも口コミ集計と実会計には差がある。",
+      "near": "駅からの導線、夜の串焼きと日本酒、仲間との宴会。",
+      "difference": "宇都宮駅西口で、壺亭は東口。肉巻き串と浜焼きの料理差がある。",
+      "code": "DYZJzDtOEWw",
+      "handle": "tochi_bow",
+      "format": "リール",
+      "likes": 12,
+      "comments": 0,
+      "pr": "確認できず",
+      "publishedLabel": "2026-05-16",
+      "menuPrice": null,
+      "tags": [
+        "名物を一つ",
+        "駅からの距離",
+        "二店舗の案内"
+      ],
+      "transferScore": 3,
+      "observed": "名物の肉巻き串を取り上げ、西口店の近さと池上本店を区別して案内。撮影された支店の特定は本文だけでは未確認。",
+      "hypothesis": "名物とアクセスを短く結ぶ説明の参考。いいね12件を高反応や成功の証拠とはしない。",
+      "transfer": "浜焼きの主役を一つ選び、壺亭の正式店名・東口屋台村の入口を一緒に示す。",
+      "avoid": "西口徒歩3分・創業年・肉巻き串を壺亭の事実として使わない。",
+      "planId": "night-hamayaki",
+      "budgetAlternative": "https://www.hotpepper.jp/strJ003559843/",
+      "views": null,
+      "viewsDisplay": "取得不可",
+      "actualSpend": null,
+      "checkedAt": "2026-10-23",
+      "budgetCheckedAt": "2026-10-23",
+      "budgetRange": {
+        "min": 4000,
+        "max": 5000
+      },
+      "qualification": "店舗の掲載予算が条件内／投稿者の実会計は未確認",
+      "budgetBasis": "restaurant_listing",
+      "url": "https://www.instagram.com/tochi_bow/reel/DYZJzDtOEWw/",
+      "meal": "夜",
+      "fullVideoObserved": false,
+      "hook": "冒頭0〜3秒・実映像・音声は未確認。本文のみを分析。",
+      "alternative": "再生数・保存・共有・実送客は取得不可。投稿経過期間、料理、発信者規模、PR条件が異なるため反応の差を因果としない。"
+    },
+    {
+      "restaurant": "串焼きかめや 宇都宮駅前店",
+      "budget": "4,000〜4,999円（食べログ掲載予算）",
+      "budgetSource": "https://tabelog.com/tochigi/A0901/A090101/9022618/",
+      "officialSource": "https://www.instagram.com/kameya_ekimae/",
+      "budgetNote": "口コミ集計は5,000〜5,999円で掲載予算とは異なる。投稿者の飲料込み実会計は未確認。本文の過去価格を現行の料金や壺亭の価格として使わない。",
+      "near": "駅からの導線、夜の串焼きと日本酒、仲間との宴会。",
+      "difference": "宇都宮駅西口で、壺亭は東口。肉巻き串と浜焼きの料理差がある。",
+      "code": "C_k49OZS3Hp",
+      "handle": "a_san_sub",
+      "format": "リール",
+      "likes": 73,
+      "comments": 1,
+      "pr": "確認できず",
+      "publishedLabel": "2024-09-06",
+      "menuPrice": "のりチーズ280円／ミニトマト肉巻き240円／アスパラ肉巻き280円等（当時の投稿記載）",
+      "tags": [
+        "料理と日本酒",
+        "選ぶ理由",
+        "夜の注文"
+      ],
+      "transferScore": 4,
+      "observed": "注文した串の種類と単品料金、日本酒の選び方・銘柄の楽しみを紹介。",
+      "hypothesis": "料理と飲料をセットで説明することで、酒好きが同行者を誘う理由を作れる可能性。実共有数は未取得。",
+      "transfer": "壺亭で実際に提供する浜焼きと一杯を撮り、味の組合せと飲料込みの料金を説明。",
+      "avoid": "元店の日本酒銘柄・注ぎ方・当時の串価格を再現しない。飲み過ぎを促さない。",
+      "planId": "night-friends",
+      "views": null,
+      "viewsDisplay": "取得不可",
+      "actualSpend": null,
+      "checkedAt": "2026-10-23",
+      "budgetCheckedAt": "2026-10-23",
+      "budgetRange": {
+        "min": 4000,
+        "max": 5000
+      },
+      "qualification": "店舗の掲載予算が条件内／投稿者の実会計は未確認",
+      "budgetBasis": "restaurant_listing",
+      "url": "https://www.instagram.com/a_san_sub/reel/C_k49OZS3Hp/",
+      "meal": "夜",
+      "fullVideoObserved": false,
+      "hook": "冒頭0〜3秒・実映像・音声は未確認。本文のみを分析。",
+      "alternative": "再生数・保存・共有・実送客は取得不可。投稿経過期間、料理、発信者規模、PR条件が異なるため反応の差を因果としない。"
+    }
+  ],
+  "supportPosts": [
+    {
+      "restaurant": "Le Timbre（ルタンブル）",
+      "budget": "4,001〜5,000円（ホットペッパー掲載予算）",
+      "budgetSource": "https://www.hotpepper.jp/strJ003532035/",
+      "officialSource": "https://www.instagram.com/letimbre_utsunomiya/",
+      "budgetNote": "店舗の現在の掲載予算で選定。投稿者の一人実会計・当時の総額は取得不可。単品合計を人数不明のまま割り戻さない。",
+      "near": "宇都宮の夜、炭焼き料理と一杯、友人同士の食事という接点。",
+      "difference": "洋風ビストロ酒場で、料理・ワイン・空間は壺亭の浜焼きとは違う。",
+      "code": "Da49bKwEw98",
+      "handle": "nasu_guru",
+      "format": "写真・カルーセル",
+      "likes": 253,
+      "comments": null,
+      "pr": "確認できず",
+      "publishedLabel": "2026-07-17",
+      "menuPrice": null,
+      "tags": [
+        "夜の食事",
+        "誰と行くか",
+        "店の雰囲気"
+      ],
+      "transferScore": 3,
+      "observed": "夜の肉料理と空間への感想を紹介。飲酒していないことを本文で明記し、住所と営業を案内。コメント制限表示あり。",
+      "hypothesis": "夜の過ごし方を想像させる本文の補助参考。再生を取得できない写真投稿で、リールの成功実績ではない。",
+      "transfer": "浜焼きを囲む成人の友人の手元を撮り、アルコール以外の選択肢も店舗確認して案内。",
+      "avoid": "洋食の料理、親子利用、他店の空間を壺亭へ持ち込まない。",
+      "planId": "night-friends",
+      "views": null,
+      "viewsDisplay": "取得不可",
+      "actualSpend": null,
+      "checkedAt": "2026-10-23",
+      "budgetCheckedAt": "2026-10-23",
+      "budgetRange": {
+        "min": 4000,
+        "max": 5000
+      },
+      "qualification": "店舗の掲載予算が条件内／投稿者の実会計は未確認",
+      "budgetBasis": "restaurant_listing",
+      "url": "https://www.instagram.com/nasu_guru/p/Da49bKwEw98/",
+      "meal": "夜",
+      "fullVideoObserved": false,
+      "hook": "写真投稿の補助例。リールの冒頭・映像・音声の分析対象外。",
+      "alternative": "再生数・保存・共有・実送客は取得不可。投稿経過期間、料理、発信者規模、PR条件が異なるため反応の差を因果としない。"
+    },
+    {
+      "restaurant": "串焼きかめや 池上町本店",
+      "budget": "4,001〜5,000円（ホットペッパー掲載予算）",
+      "budgetSource": "https://www.hotpepper.jp/strJ003559843/",
+      "budgetAlternative": "https://tabelog.com/tochigi/A0901/A090101/9000426/",
+      "officialSource": "https://www.instagram.com/kameya_utsunomiya/",
+      "budgetNote": "食べログ掲載予算も4,000〜4,999円。一方、口コミ集計は5,000〜5,999円。掲載帯の一致であり、注文内容や投稿者実会計が必ず範囲内という意味ではない。",
+      "near": "宇都宮の夜の居酒屋、焼き物、友人・宴会の利用。",
+      "difference": "主役は肉巻き串。浜焼きや海鮮の実績と同一視しない。",
+      "code": "DKn4-NoyIGQ",
+      "handle": "sayaka.508",
+      "format": "写真・カルーセル",
+      "likes": 269,
+      "comments": 0,
+      "pr": "確認できず",
+      "publishedLabel": "2025-06-08",
+      "menuPrice": null,
+      "tags": [
+        "調理の手間",
+        "宴会の席",
+        "味の変化"
+      ],
+      "transferScore": 4,
+      "observed": "手巻き・串打ちという手間、辛味噌による味の変化、カウンターと宴会用の席を本文で説明。",
+      "hypothesis": "料理だけでなく食べ方・席を紹介すると利用場面が具体化する可能性。写真の反応とリール再生は別の指標。",
+      "transfer": "浜焼きの食べ方を店へ取材し、通常の食べ方・取り分け方と実席を案内。",
+      "avoid": "辛味噌や二階席を壺亭にあるものとして扱わない。",
+      "planId": "night-organizer",
+      "views": null,
+      "viewsDisplay": "取得不可",
+      "actualSpend": null,
+      "checkedAt": "2026-10-23",
+      "budgetCheckedAt": "2026-10-23",
+      "budgetRange": {
+        "min": 4000,
+        "max": 5000
+      },
+      "qualification": "店舗の掲載予算が条件内／投稿者の実会計は未確認",
+      "budgetBasis": "restaurant_listing",
+      "url": "https://www.instagram.com/sayaka.508/p/DKn4-NoyIGQ/",
+      "meal": "夜",
+      "fullVideoObserved": false,
+      "hook": "写真投稿の補助例。リールの冒頭・映像・音声の分析対象外。",
+      "alternative": "再生数・保存・共有・実送客は取得不可。投稿経過期間、料理、発信者規模、PR条件が異なるため反応の差を因果としない。"
+    },
+    {
+      "restaurant": "炭とワイン 花れ",
+      "budget": "4,001〜5,000円（ホットペッパー掲載予算）",
+      "budgetSource": "https://www.hotpepper.jp/strJ004444689/",
+      "budgetAlternative": "https://tabelog.com/tochigi/A0901/A090101/9023703/",
+      "officialSource": "https://www.instagram.com/sumi.wine_hanare/",
+      "budgetNote": "ホットペッパーの予算詳細は4,000円、食べログの平均予算は未掲載。実際の注文総額は取得不可。高額コースがあることと、通常掲載予算を分けて記録。",
+      "near": "宇都宮の夜、炭焼きと酒、カウンターや友人との食事という場面。",
+      "difference": "洋食・ワイン寄り。壺亭でワインの品揃えや同じ空間を保証しない。",
+      "code": "DOpfxcikvK6",
+      "handle": "sayaka.508",
+      "format": "写真・カルーセル",
+      "likes": 233,
+      "comments": 0,
+      "pr": "確認できず",
+      "publishedLabel": "2025-09-16",
+      "menuPrice": null,
+      "tags": [
+        "料理と酒",
+        "選びやすさ",
+        "一人・友人"
+      ],
+      "transferScore": 3,
+      "observed": "炭焼き料理と酒を、初心者でも選びやすい説明や一人・デート・友人利用に結び付ける本文。",
+      "hypothesis": "知識がなくても選べるという説明は初来店の不安を減らし得る。接客の実体験や売上効果を第三者検証したものではない。",
+      "transfer": "浜焼き初心者向けに注文方法と食べ方を短く説明。飲料の案内は店の承認を得る。",
+      "avoid": "ワインの知識・静かな空間・料理の美しさを壺亭の保証にしない。",
+      "planId": "night-friends",
+      "views": null,
+      "viewsDisplay": "取得不可",
+      "actualSpend": null,
+      "checkedAt": "2026-10-23",
+      "budgetCheckedAt": "2026-10-23",
+      "budgetRange": {
+        "min": 4000,
+        "max": 5000
+      },
+      "qualification": "店舗の掲載予算が条件内／投稿者の実会計は未確認",
+      "budgetBasis": "restaurant_listing",
+      "url": "https://www.instagram.com/sayaka.508/p/DOpfxcikvK6/",
+      "meal": "夜",
+      "fullVideoObserved": false,
+      "hook": "写真投稿の補助例。リールの冒頭・映像・音声の分析対象外。",
+      "alternative": "再生数・保存・共有・実送客は取得不可。投稿経過期間、料理、発信者規模、PR条件が異なるため反応の差を因果としない。"
+    },
+    {
+      "restaurant": "串焼きかめや 宇都宮駅前店",
+      "budget": "4,000〜4,999円（食べログ掲載予算）",
+      "budgetSource": "https://tabelog.com/tochigi/A0901/A090101/9022618/",
+      "officialSource": "https://www.instagram.com/kameya_ekimae/",
+      "budgetNote": "投稿本文にも5,000円のコースを明記。ただし過去の季節コースで、追加注文・当時の総会計は不明。現行掲載予算4,000〜4,999円と、口コミ集計5,000〜5,999円を区別。",
+      "near": "駅からの導線、夜の串焼きと日本酒、仲間との宴会。",
+      "difference": "宇都宮駅西口で、壺亭は東口。肉巻き串と浜焼きの料理差がある。",
+      "code": "DFaPkLHyvqA",
+      "handle": "a_san_sub",
+      "format": "写真・カルーセル",
+      "likes": 83,
+      "comments": 1,
+      "pr": "タイアップ表示を確認",
+      "publishedLabel": "2025-01-29",
+      "menuPrice": "冬の鍋付き8品・2時間飲み放題5,000円（当時の投稿記載）",
+      "tags": [
+        "5,000円コース",
+        "新年会",
+        "料理と飲料の条件"
+      ],
+      "transferScore": 5,
+      "observed": "仲間内の新年会という用途、8品・鍋・串・2時間飲み放題・5,000円を具体的に説明。",
+      "hypothesis": "料理と飲料の時間・料金をまとめることで幹事の比較を助ける可能性。保存・予約実績は未取得。",
+      "transfer": "壺亭の現行5,000円プランを店へ確認し、品数・人数・飲み放題と追加料金を一枚で整理する。",
+      "avoid": "冬の過去コースを現在も同条件としない。位置タグは旧表記だが本文の@駅前店と西口の記載で照合。",
+      "planId": "night-organizer",
+      "views": null,
+      "viewsDisplay": "取得不可",
+      "actualSpend": null,
+      "checkedAt": "2026-10-23",
+      "budgetCheckedAt": "2026-10-23",
+      "budgetRange": {
+        "min": 4000,
+        "max": 5000
+      },
+      "qualification": "店舗の掲載予算が条件内／投稿者の実会計は未確認",
+      "budgetBasis": "restaurant_listing",
+      "url": "https://www.instagram.com/a_san_sub/p/DFaPkLHyvqA/",
+      "meal": "夜",
+      "fullVideoObserved": false,
+      "hook": "写真投稿の補助例。リールの冒頭・映像・音声の分析対象外。",
+      "alternative": "再生数・保存・共有・実送客は取得不可。投稿経過期間、料理、発信者規模、PR条件が異なるため反応の差を因果としない。"
+    },
+    {
+      "restaurant": "炉端 炭じろ",
+      "budget": "4,001〜5,000円（ホットペッパー掲載予算）",
+      "budgetSource": "https://www.hotpepper.jp/strJ003533157/",
+      "officialSource": "https://www.instagram.com/tanjiro_utunomiya/",
+      "budgetNote": "現行の掲載予算を確認。投稿者の実会計は取得不可。本文の一品サービスは過去の発信で、現在の有効性を確認していない。",
+      "near": "宇都宮駅東口・東宿郷、刺身と焼き物、成人の夜利用。料理・地域の両方が近い。",
+      "difference": "炉端店で浜焼き専業ではない。元店の特典やホテルとの提携を壺亭へコピーしない。",
+      "code": "DKrJrUMIjc-",
+      "handle": "nagateku_hoteguru",
+      "format": "写真・カルーセル",
+      "creatorType": "企業メディアの補助例",
+      "likes": 2,
+      "comments": 0,
+      "pr": "ホテルの推薦・画面提示特典を本文に記載。PR表記の有無は確認できず",
+      "publishedLabel": "2025-06-09",
+      "menuPrice": null,
+      "tags": [
+        "駅東口",
+        "刺身と炭焼き",
+        "宿泊者の動線"
+      ],
+      "transferScore": 4,
+      "observed": "ホテルから歩く動線と、刺身・炭焼き・地鶏を紹介。一品サービスの案内を含む企業メディアの発信。",
+      "hypothesis": "駅近の滞在者に料理と徒歩導線を同時に伝える方法の補助参考。いいね2件をバズや有効性の証明にしない。",
+      "transfer": "壺亭の東口から入口までの分かりやすい道順と、通常の浜焼き・刺身をセットで案内。",
+      "avoid": "他ホテルの推薦・提携・サービスを壺亭の事実にしない。",
+      "planId": "night-hamayaki",
+      "views": null,
+      "viewsDisplay": "取得不可",
+      "actualSpend": null,
+      "checkedAt": "2026-10-23",
+      "budgetCheckedAt": "2026-10-23",
+      "budgetRange": {
+        "min": 4000,
+        "max": 5000
+      },
+      "qualification": "店舗の掲載予算が条件内／投稿者の実会計は未確認",
+      "budgetBasis": "restaurant_listing",
+      "url": "https://www.instagram.com/nagateku_hoteguru/p/DKrJrUMIjc-/",
+      "meal": "夜",
+      "fullVideoObserved": false,
+      "hook": "写真投稿の補助例。リールの冒頭・映像・音声の分析対象外。",
+      "alternative": "再生数・保存・共有・実送客は取得不可。投稿経過期間、料理、発信者規模、PR条件が異なるため反応の差を因果としない。"
     }
   ],
   "selectionPosts": [
@@ -286,27 +726,30 @@
       "title": "焼く時間を、来店の理由に",
       "text": "完成品だけでなく、一緒に焼いて取り分ける時間を主役にする。壺亭では実際の貝の焼き上がりを通常提供のまま撮る。",
       "refs": [
-        "DeqyJI0TSbn"
+        "DeqyJI0TSbn",
+        "DIgJehOyAeq"
       ],
-      "alternative": "近似として残した投稿は1件だけで、複数投稿に共通する成功法則とは実証できない。以下は壺亭の確認済み特徴と投稿本文から作る検証仮説。",
+      "alternative": "リールと写真の本文から抽出した検証仮説。新規追加投稿の再生は未取得で、共通したバズ要因として実証していない。写真は映像の成功分析には使わない。",
       "test": "冒頭を貝の動作と盛りの全景で比較。料金・字幕量・尺はできるだけ固定。"
     },
     {
       "title": "幹事が決められる情報を添える",
       "text": "人数・料理と飲料・料金・予約先を分けて示す。5,000円プランの現行条件を確認してから、友人に送りやすい案内にする。",
       "refs": [
+        "DFaPkLHyvqA",
         "DeqyJI0TSbn"
       ],
-      "alternative": "近似として残した投稿は1件だけで、複数投稿に共通する成功法則とは実証できない。以下は壺亭の確認済み特徴と投稿本文から作る検証仮説。",
+      "alternative": "リールと写真の本文から抽出した検証仮説。新規追加投稿の再生は未取得で、共通したバズ要因として実証していない。写真は映像の成功分析には使わない。",
       "test": "公開反応と、専用予約リンク等で確認できる問い合わせ・実来店を別々に記録。"
     },
     {
       "title": "誰と過ごす、どんな夜か",
       "text": "仕事帰りの一杯と友人の宴会を分ける。店の言葉・料理・入口を一つの用途へ結び付ける。",
       "refs": [
-        "DeqyJI0TSbn"
+        "C_k49OZS3Hp",
+        "DOpfxcikvK6"
       ],
-      "alternative": "近似として残した投稿は1件だけで、複数投稿に共通する成功法則とは実証できない。以下は壺亭の確認済み特徴と投稿本文から作る検証仮説。",
+      "alternative": "リールと写真の本文から抽出した検証仮説。新規追加投稿の再生は未取得で、共通したバズ要因として実証していない。写真は映像の成功分析には使わない。",
       "test": "体験主導と幹事向け情報主導を別企画にし、相談の質と来店用途まで確認する。"
     }
   ],
@@ -318,7 +761,8 @@
       "title": "海のない栃木で、浜焼きを囲む夜。",
       "candidate": "tochigi_gourmet1",
       "refs": [
-        "DeqyJI0TSbn"
+        "DeqyJI0TSbn",
+        "DIgJehOyAeq"
       ],
       "aim": "壺亭を覚える入口を、貝が焼けて取り分ける固有の体験にする。",
       "target": "宇都宮駅東口で成人の友人同士・仕事仲間と食事したい人（仮説）。",
@@ -327,7 +771,7 @@
       "space": "東口屋台村の入口→当店看板→実際のテーブル。顔や他店客を無断で映さない。",
       "caption": "店名・住所・駅東口からの動線、実際に注文した魚介・量・税込価格・飲料・お通しを整理。仕入れによる変更を記載。通常提供以外の増量をしない。 想定予算は一人4,000〜5,000円。実注文・飲料・お通しの合計が範囲内か確認し、外れる内容はこの価格帯のPRとして掲載しない。",
       "cta": "「次に集まる相手へ共有。提供内容と空席は掲載の店舗ページで確認」。予約が必要な条件は本文へ。",
-      "why": "魚介の内容・人数・価格を明示する本文を説明構造の参考にし、壺亭の浜焼き・成人の夜利用・4,000〜5,000円という依頼条件へ作り替えたオリジナル案。元動画の冒頭・映像構成や送客効果の再現を実証したものではない。",
+      "why": "料理の主役・人数・料金・料理と一杯を具体化する本文を参考に、壺亭の浜焼き・成人の夜利用・4,000〜5,000円へ作り替えた案。写真は説明内容の参考に限定。新規例の再生は未取得で、元動画の映像構成や送客効果の再現を実証していない。",
       "metrics": "7日後に再生・いいね・コメントを記録。本人が共有できる保存・共有・冒頭維持率は別欄。予約経路は専用リンク等で実測。",
       "fieldOrder": "①空席の入口・看板・テーブル→②通常の盛りと品名札を照合→③店の手順で加熱→④焼き上がりの寄り→⑤安全に取り分け→⑥刺身・飲料→⑦レシートと本文用の価格条件を照合。",
       "shots": [
@@ -382,7 +826,7 @@
       "title": "幹事が知りたい、浜焼き宴会の3つ。",
       "candidate": "tochigi_gourmet1",
       "refs": [
-        "DeqyJI0TSbn"
+        "DFaPkLHyvqA"
       ],
       "aim": "料理・料金・人数を明快にし、夜の宴会候補として比較・相談しやすくする。",
       "target": "宇都宮駅東口で成人4名以上の集まりを検討する幹事（提案対象）。",
@@ -391,7 +835,7 @@
       "space": "実際の掘りごたつ・テーブルを、許可された配置で撮影。個室表現なし。38席と40名の差は店へ確認してから掲載。",
       "caption": "確認済みのコース名・税込料金・品数・飲み放題時間とL.O.・申込人数・追加料金・予約先。お通し別途の有無を確定し、不明のまま総額表現しない。貸切は要相談。 想定予算は一人4,000〜5,000円。実注文・飲料・お通しの合計が範囲内か確認し、外れる内容はこの価格帯のPRとして掲載しない。",
       "cta": "「幹事さん用に保存。人数・利用日を添えて店舗へ相談」。電話・予約リンクは現在の窓口を確認。",
-      "why": "魚介の内容・人数・価格を明示する本文を説明構造の参考にし、壺亭の浜焼き・成人の夜利用・4,000〜5,000円という依頼条件へ作り替えたオリジナル案。元動画の冒頭・映像構成や送客効果の再現を実証したものではない。",
+      "why": "料理の主役・人数・料金・料理と一杯を具体化する本文を参考に、壺亭の浜焼き・成人の夜利用・4,000〜5,000円へ作り替えた案。写真は説明内容の参考に限定。新規例の再生は未取得で、元動画の映像構成や送客効果の再現を実証していない。",
       "metrics": "保存・共有は本人から取得できる場合だけ記録。問い合わせ件数・条件の質問・予約実績を公開反応と分ける。",
       "fieldOrder": "①空席の席配置と入口→②確認済み料金表・条件を記録→③コース料理を提供順に個別撮影→④料理全体が分かる編集用カット→⑤飲料→⑥予約先を照合。撮影都合の盛り増し・品数追加をしない。",
       "shots": [
@@ -446,7 +890,8 @@
       "title": "焼く、分ける、一杯。東口の夜の待ち合わせ。",
       "candidate": "tochigi_gourmet1",
       "refs": [
-        "DeqyJI0TSbn"
+        "C_k49OZS3Hp",
+        "DOpfxcikvK6"
       ],
       "aim": "浜焼きの寄りだけで終わらず、友人と過ごす夜の具体像を伝える。",
       "target": "成人の友人グループや仕事帰りの仲間。子連れや未成年向けの企画にしない。",
@@ -455,7 +900,7 @@
       "space": "実際のテーブルと空席、外観。演者の同意、他客の映り込み回避。静か・完全個室・予約不要等は書かない。",
       "caption": "一緒に焼く体験、実注文の量と料金、成人の利用条件、東口からの道順、現行営業と予約先。店主の言葉を使う場合は取材・承認した内容だけ。 想定予算は一人4,000〜5,000円。実注文・飲料・お通しの合計が範囲内か確認し、外れる内容はこの価格帯のPRとして掲載しない。",
       "cta": "「次の集まりの候補に保存・同行者へ共有」。空席・料理内容は店舗情報を確認。",
-      "why": "魚介の内容・人数・価格を明示する本文を説明構造の参考にし、壺亭の浜焼き・成人の夜利用・4,000〜5,000円という依頼条件へ作り替えたオリジナル案。元動画の冒頭・映像構成や送客効果の再現を実証したものではない。",
+      "why": "料理の主役・人数・料金・料理と一杯を具体化する本文を参考に、壺亭の浜焼き・成人の夜利用・4,000〜5,000円へ作り替えた案。写真は説明内容の参考に限定。新規例の再生は未取得で、元動画の映像構成や送客効果の再現を実証していない。",
       "metrics": "体験主導と幹事向け企画を別に記録。共有・保存の取得可否を明記し、来店時の任意回答等で用途を確認。",
       "fieldOrder": "①空席・入口→②当日の通常の魚介と飲料→③提供直前の焼き上がり→④同意済み演者の取り分け→⑤刺身・一杯→⑥実注文の価格と予約先照合。編集順と撮影順は別。",
       "shots": [
@@ -521,13 +966,26 @@
     },
     "detailIds": [
       "DeqyJI0TSbn",
+      "DIgJehOyAeq",
+      "Cz0tpKdSZH_",
+      "DYZJzDtOEWw",
+      "C_k49OZS3Hp",
+      "Da49bKwEw98",
+      "DKn4-NoyIGQ",
+      "DOpfxcikvK6",
+      "DFaPkLHyvqA",
+      "DKrJrUMIjc-",
       "Dd_NJLWvhOP"
     ],
     "fullVideoCount": 0,
     "strictMatchCount": 0,
+    "strictMatchDefinition": "投稿者の現行一人実会計4,000〜5,000円と10万再生以上の両方を確認した件数",
+    "listingPriceMatchCount": 9,
     "retainedConditionalCount": 1,
-    "removedFromPrevious": 9,
-    "sourceNote": "追加440件はアカウント内URLで重複を除いた保持サンプル数で、全投稿数でも全編視聴数でもありません。前回115リール候補と重複するため合算しません。肉・ピザ・中華・低予算・高予算・昼中心の投稿で件数を埋めず、掲載予算に媒体差のある海鮮1件のみ条件付き参考として掲載。"
+    "addedDetails": 9,
+    "reels": 5,
+    "photoSupplements": 5,
+    "sourceNote": "前回440件の本文候補と115リール候補には重複があり合算しない。今回の追加9詳細は、公式の炭じろ・ルタンブル・かめや本店・かめや駅前店のタグ付き一覧等から発見した実投稿。居酒屋全般へジャンルを広げたが、価格不一致の投稿を戻したものではない。写真5件は補助枠（うち企業メディア1件）で、リールや10万再生実績に加算しない。掲載予算の一致9件と、媒体差のある既存1件を区別。投稿者の総会計は全件未取得。"
   },
   "comparisonStores": [
     {
@@ -535,7 +993,7 @@
       "budget": "4,001〜5,000円（ホットペッパー掲載）",
       "url": "https://www.hotpepper.jp/strJ003533157/",
       "text": "宇都宮駅東口・東宿郷。炉端焼き、鮮魚、夜の宴会という比較軸が近い。浜焼き専業ではなく、個室等の設備も壺亭とは異なる。",
-      "status": "店舗比較のみ。対応するインフルエンサーの実リール・再生数を今回確認できず、投稿件数やバズ実績には加算しない。"
+      "status": "今回、企業メディアの写真投稿を補助例に追加。実リール・再生数は未確認で、個人インフルエンサーのバズ実績とは扱わない。"
     }
   ]
 }

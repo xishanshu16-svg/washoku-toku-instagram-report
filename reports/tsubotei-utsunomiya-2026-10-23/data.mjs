@@ -1,5 +1,7 @@
+import {additionalExamples,extraCreators} from './additional-examples.mjs';
+export {extraCreators};
 export const meta={title:'浜やき屋 壺亭 様×PR調査',checkedAt:'2026-10-23',generatedAt:'2026-10-23',period:null,priceFilter:{min:4000,max:5000,currency:'JPY'},
- scope:'指定5名のプロフィールを追加スクロール調査し、各88件・計440件のURLと本文表示候補を保持（既調査との重複を含む、リール以外も含む）。前回のリール一覧115候補・詳細13ページも再選別。全編視聴0件。全投稿・全期間の網羅調査ではありません。',
+ scope:'指定5名の前回440件の本文候補・115リール一覧候補の調査を土台に、今回、通常予算4,000〜5,000円の居酒屋全般へ拡大。公開検索と公式4店舗のタグ付き一覧、追加発信者プロフィールから9投稿の詳細を追加確認。現在はリール5件・写真補助5件。全編視聴0件。全投稿・全期間を網羅していません。',
  method:'Instagramの既存ログイン状態で、指定URLと公開投稿へ直接アクセス。おすすめフィード・個人の閲覧履歴は選定に使用せず、プロフィール／一覧の表示サンプルから料理と夜用途を照合。店舗は食べログ・公式Instagram・ホットペッパーを照合。',
  limits:'再生・フォロワーは公開の丸め表示。保存・共有・視聴維持率・視聴者地域・実送客・PR費は取得不可。反応の大小は来店や好意の証明ではありません。冒頭映像・カット順・音声は未確認で、勝因は本文からの仮説です。',
  timeNote:'今回の想定客単価は4,000〜5,000円。期間指定なし。単品・宴会コース料金だけで通常の客単価一致としません。掲載予算・実会計・投稿時の価格を区別し、媒体間の差は明示します。'};
@@ -45,7 +47,9 @@ const raw=[
 const publicPost=p=>({...p,url:'https://www.instagram.com/'+p.handle+'/reel/'+p.code+'/',checkedAt:meta.checkedAt,budget:null,actualSpend:null,fullVideoObserved:false,hook:'冒頭0〜3秒の実映像は未確認。本文の訴求を要約した分析です。'});
 export const posts=raw.filter(p=>p.code==='DeqyJI0TSbn').map(p=>({...publicPost(p),transferScore:4,qualification:'海鮮・夜用途は近い／掲載予算に媒体差あり・完全一致ではない',budget:'食べログ掲載4,000〜4,999円／ぐるなび通常平均3,000円・宴会平均4,000円',budgetSource:'https://tabelog.com/tochigi/A0902/A090203/9008996/',budgetAlternative:'https://r.gnavi.co.jp/11c09r8j0000/',officialSource:'https://sakana-genten.com/',budgetNote:'食べログは旧表記「本気家 源天 本店」。住所・電話は魚食処源天の公式と一致。ただし媒体間の予算差と表記更新差があるため、現行の一人会計4,000〜5,000円を保証せず、条件完全一致には数えない。'}));
 export const selectionPosts=raw.filter(p=>p.code==='Dd_NJLWvhOP').map(p=>({...publicPost(p),budget:'夜の一人予算は確認できず',budgetSource:'https://tktakayuki0507.wixsite.com/hitoshio',budgetNote:'魚の一皿価格は一人会計ではない。夜予算4,000〜5,000円の近似事例には採用しない。'}));
-export const supportPosts=[];
+posts[0].format='リール';posts[0].budgetBasis='conflicting_listing';posts[0].near='刺身・焼き魚・焼き物、夜の居酒屋利用。';posts[0].difference='下野市の店舗。浜焼きそのものの実績ではなく、通常予算に媒体差がある。';
+posts.push(...additionalExamples.filter(p=>p.format==='リール'));
+export const supportPosts=additionalExamples.filter(p=>p.format!=='リール');
 export const axes=['料理・体験','利用場面','価格と条件','地域・来店導線'];
 const day={score:null,status:'対象外',reason:'対象店の昼営業を確認できないため、昼向けの依頼順位・料理・星は設定しません。',ask:'昼営業を新設する場合のみ、提供日・料理・価格を確定して別途選定。'};
 const baselineAccounts=[
@@ -66,6 +70,11 @@ export const accounts=baselineAccounts.map(a=>{const {day,...baseAccount}=a;let 
  else {n={...n,score:null,reason:'4,000〜5,000円・夜の海鮮／浜焼きという今回条件の直接根拠を十分確認できず、点数と順位を保留。',rankReason:'前回の順位は肉・ピザ・中華などの構造参考も含んでいたため撤回。本人の力量が低いという判断ではなく、今回の公開サンプルで条件一致の根拠が不足しているため。',axes:['海鮮・浜焼きの夜リールを条件付きで確認する必要あり。','成人の友人・仕事帰り・宴会向けの紹介例を追加確認。','通常の一人会計4,000〜5,000円、飲料・お通し込みの条件を要確認。','プロフィールの栃木発信だけで宇都宮駅東口の送客を保証しない。'],brief:'条件に近い実投稿を本人から確認できた場合だけ、現行の浜焼きと料金を伝える案を相談。',caution:'価格不一致・昼料理・カルーセルを今回の夜リール実績へ繰り上げない。',ask:'通常一人会計4,000〜5,000円の夜の海鮮リールを複数、実績URL、PR費、視聴者地域、取得可能なインサイト。'};}
  return {...baseAccount,evidence,night:n};});
 export const orders={night:['tochigi_gourmet1','tochigi__gurume','tochigi_discover','tochino_ki_','usagi.gurume'],day:[]};
-export const patterns=baselinePatterns.map(p=>({...p,refs:['DeqyJI0TSbn'],alternative:'近似として残した投稿は1件だけで、複数投稿に共通する成功法則とは実証できない。以下は壺亭の確認済み特徴と投稿本文から作る検証仮説。'}));
-export const comparisonStores=[{name:'炉端 炭じろ',budget:'4,001〜5,000円（ホットペッパー掲載）',url:'https://www.hotpepper.jp/strJ003533157/',text:'宇都宮駅東口・東宿郷。炉端焼き、鮮魚、夜の宴会という比較軸が近い。浜焼き専業ではなく、個室等の設備も壺亭とは異なる。',status:'店舗比較のみ。対応するインフルエンサーの実リール・再生数を今回確認できず、投稿件数やバズ実績には加算しない。'}];
-export const coverage={profileCounts:Object.fromEntries(accounts.map(a=>[a.handle,88])),reelCounts:{'tochino_ki_':35,'usagi.gurume':35,'tochigi__gurume':15,'tochigi_gourmet1':15,'tochigi_discover':15},detailIds:['DeqyJI0TSbn','Dd_NJLWvhOP'],fullVideoCount:0,strictMatchCount:0,retainedConditionalCount:1,removedFromPrevious:9,sourceNote:'追加440件はアカウント内URLで重複を除いた保持サンプル数で、全投稿数でも全編視聴数でもありません。前回115リール候補と重複するため合算しません。肉・ピザ・中華・低予算・高予算・昼中心の投稿で件数を埋めず、掲載予算に媒体差のある海鮮1件のみ条件付き参考として掲載。'};
+accounts[0].evidence.push('DIgJehOyAeq');
+accounts[0].night.reason='海鮮・焼き魚の直接例に加え、掲載予算4,001〜5,000円のルタンブルで、名物料理・食感・単品料金を説明したリールも確認。第一相談候補とし、壺亭の通常総額と送客実績は依頼前に確認する。';
+accounts[0].night.axes[2]='源天は媒体差あり。追加確認のルタンブルはホットペッパー掲載4,001〜5,000円。投稿記載の単品料金と実会計は別の値。';
+accounts[0].night.rankReason='相談順1位。源天の海鮮紹介と、今回追加した同価格帯のビストロ酒場紹介の両方を根拠に、主力料理と料金を伝える具体性を評価。ルタンブルの再生は取得不可で、いいね1,084件から再生や予約数を推測しない。4点は送客の保証ではない。';
+const patternRefs=[['DeqyJI0TSbn','DIgJehOyAeq'],['DFaPkLHyvqA','DeqyJI0TSbn'],['C_k49OZS3Hp','DOpfxcikvK6']];
+export const patterns=baselinePatterns.map((p,i)=>({...p,refs:patternRefs[i],alternative:'リールと写真の本文から抽出した検証仮説。新規追加投稿の再生は未取得で、共通したバズ要因として実証していない。写真は映像の成功分析には使わない。'}));
+export const comparisonStores=[{name:'炉端 炭じろ',budget:'4,001〜5,000円（ホットペッパー掲載）',url:'https://www.hotpepper.jp/strJ003533157/',text:'宇都宮駅東口・東宿郷。炉端焼き、鮮魚、夜の宴会という比較軸が近い。浜焼き専業ではなく、個室等の設備も壺亭とは異なる。',status:'今回、企業メディアの写真投稿を補助例に追加。実リール・再生数は未確認で、個人インフルエンサーのバズ実績とは扱わない。'}];
+export const coverage={profileCounts:Object.fromEntries(accounts.map(a=>[a.handle,88])),reelCounts:{'tochino_ki_':35,'usagi.gurume':35,'tochigi__gurume':15,'tochigi_gourmet1':15,'tochigi_discover':15},detailIds:[...posts,...supportPosts,...selectionPosts].map(p=>p.code),fullVideoCount:0,strictMatchCount:0,strictMatchDefinition:'投稿者の現行一人実会計4,000〜5,000円と10万再生以上の両方を確認した件数',listingPriceMatchCount:9,retainedConditionalCount:1,addedDetails:9,reels:5,photoSupplements:5,sourceNote:'前回440件の本文候補と115リール候補には重複があり合算しない。今回の追加9詳細は、公式の炭じろ・ルタンブル・かめや本店・かめや駅前店のタグ付き一覧等から発見した実投稿。居酒屋全般へジャンルを広げたが、価格不一致の投稿を戻したものではない。写真5件は補助枠（うち企業メディア1件）で、リールや10万再生実績に加算しない。掲載予算の一致9件と、媒体差のある既存1件を区別。投稿者の総会計は全件未取得。'};

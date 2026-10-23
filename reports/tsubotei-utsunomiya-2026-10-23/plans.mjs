@@ -27,4 +27,5 @@ const drafts=[
  ['18.0–22.0秒','店名・予約先・注意書き。','次に集まる人へ共有｜空席は店舗で確認','共有と確認のCTA']
  ]}
 ];
-export const plans=drafts.map(p=>({...p,candidate:'tochigi_gourmet1',refs:['DeqyJI0TSbn'],why:'魚介の内容・人数・価格を明示する本文を説明構造の参考にし、壺亭の浜焼き・成人の夜利用・4,000〜5,000円という依頼条件へ作り替えたオリジナル案。元動画の冒頭・映像構成や送客効果の再現を実証したものではない。',caption:p.caption+' 想定予算は一人4,000〜5,000円。実注文・飲料・お通しの合計が範囲内か確認し、外れる内容はこの価格帯のPRとして掲載しない。'}));
+const currentRefs=[['DeqyJI0TSbn','DIgJehOyAeq'],['DFaPkLHyvqA'],['C_k49OZS3Hp','DOpfxcikvK6']];
+export const plans=drafts.map((p,i)=>({...p,candidate:'tochigi_gourmet1',refs:currentRefs[i],why:'料理の主役・人数・料金・料理と一杯を具体化する本文を参考に、壺亭の浜焼き・成人の夜利用・4,000〜5,000円へ作り替えた案。写真は説明内容の参考に限定。新規例の再生は未取得で、元動画の映像構成や送客効果の再現を実証していない。',caption:p.caption+' 想定予算は一人4,000〜5,000円。実注文・飲料・お通しの合計が範囲内か確認し、外れる内容はこの価格帯のPRとして掲載しない。'}));
