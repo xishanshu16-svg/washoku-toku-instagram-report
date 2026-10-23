@@ -1,43 +1,34 @@
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import vm from 'node:vm';
-import {meta,accounts,extraCreators,posts,supportPosts,selectionPosts,orders,coverage,patterns} from './data.mjs';
+import {meta,accounts,extraCreators,posts,supportPosts,priceExcludedReels,verifiedCandidates,selectionPosts,orders,coverage,patterns} from './data.mjs';
 import {plans} from './plans.mjs';
 import {dashboardRuntime,escapeHtml} from './shell.mjs';
 const html=await readFile(new URL('./public/index.html',import.meta.url),'utf8');
 const json=JSON.parse(await readFile(new URL('./public/evidence.json',import.meta.url),'utf8'));
 assert.equal(accounts.length,5);assert.equal(new Set(accounts.map(a=>a.handle)).size,5);
 assert.deepEqual(meta.priceFilter,{min:4000,max:5000,currency:'JPY'});
-assert.equal(posts.length,5);assert.equal(posts[0].code,'DeqyJI0TSbn');assert.equal(posts[0].views,123000);
-assert.equal(supportPosts.length,5);const examples=[...posts,...supportPosts];
-assert.equal(new Set(examples.map(p=>p.code)).size,10);
-assert.equal(examples.filter(p=>p.budgetBasis==='restaurant_listing').length,9);
-assert.equal(examples.filter(p=>p.budgetBasis==='conflicting_listing').length,1);
-assert.equal(examples.filter(p=>p.views===null).length,9);
-assert.equal(examples.filter(p=>p.views>=100000).length,1);
-assert.ok(examples.every(p=>p.actualSpend===null));
-for(const p of posts)assert.equal(p.format,'リール');
-for(const p of supportPosts)assert.equal(p.format,'写真・カルーセル');
-for(const p of examples){assert.ok(p.url.includes(p.code));assert.ok(p.budgetSource.startsWith('https://'));assert.ok(p.near&&p.difference&&p.observed&&p.transfer&&p.avoid);assert.ok([...accounts,...extraCreators].some(a=>a.handle===p.handle));if(p.views===null)assert.equal(p.viewsDisplay,'取得不可');if(p.budgetBasis==='restaurant_listing')assert.deepEqual(p.budgetRange,{min:4000,max:5000});}
-assert.equal(examples.find(p=>p.code==='Cz0tpKdSZH_').likes,null);
-assert.equal(examples.find(p=>p.code==='Da49bKwEw98').comments,null);
-assert.equal(examples.find(p=>p.code==='DKrJrUMIjc-').creatorType,'企業メディアの補助例');
-assert.equal(examples.find(p=>p.code==='DFaPkLHyvqA').transferScore,5);
-assert.ok(posts[0].budget.includes('3,000円'));assert.ok(posts[0].qualification.includes('完全一致ではない'));
-assert.equal(selectionPosts.length,1);assert.equal(selectionPosts[0].code,'Dd_NJLWvhOP');
-assert.equal(coverage.strictMatchCount,0);assert.equal(coverage.retainedConditionalCount,1);
-assert.equal(Object.values(coverage.profileCounts).reduce((a,b)=>a+b,0),440);
-assert.equal(coverage.fullVideoCount,0);
-assert.equal(coverage.addedDetails,9);assert.equal(coverage.listingPriceMatchCount,9);
-assert.equal(coverage.reels,5);assert.equal(coverage.photoSupplements,5);
+assert.equal(posts.length,1);assert.equal(posts[0].code,'DIgJehOyAeq');assert.equal(posts[0].views,155000);
+assert.equal(supportPosts.length,0);assert.equal(extraCreators.length,0);
+const examples=[...posts,...priceExcludedReels];
+assert.equal(examples.length,5);assert.equal(new Set(examples.map(p=>p.code)).size,5);
+assert.deepEqual(verifiedCandidates.map(p=>p.views),[242000,155000,153000,127000,123000]);
+assert.deepEqual(verifiedCandidates.map(p=>[p.likes,p.comments]),[[2742,72],[1084,3],[1361,89],[1341,3],[925,9]]);
+assert.ok(examples.every(p=>accounts.some(a=>a.handle===p.handle)&&p.format==='リール'&&p.views>=100000&&p.actualSpend===null&&p.viewsCheckedAt==='2026-10-23'));
+for(const p of examples){assert.ok(p.url.includes(p.code));assert.ok(p.budgetSource.startsWith('https://'));assert.ok(p.viewsSource.endsWith('/reels/'));assert.ok(p.near&&p.difference&&p.observed&&p.transfer&&p.avoid);}
+assert.ok(posts.every(p=>!p.budgetConflict));assert.ok(priceExcludedReels.every(p=>p.budgetConflict));
+assert.equal(selectionPosts.length,1);
+for(const a of accounts)for(const id of a.evidence)assert.equal([...examples,...selectionPosts].find(p=>p.code===id).handle,a.handle,'Evidence author mismatch');
+assert.equal(coverage.strictMatchCount,0);assert.equal(coverage.targetCount,10);assert.equal(coverage.shortfall,9);
+assert.equal(coverage.fullVideoCount,0);assert.equal(coverage.listingPriceMatchCount,1);assert.equal(coverage.priceExcludedCount,4);
 assert.deepEqual(orders.day,[]);assert.equal(orders.night.length,5);
 assert.deepEqual(orders.night.map(h=>accounts.find(a=>a.handle===h).night.score),[4,3,null,null,null]);
 for(const a of accounts){assert.ok(!Object.hasOwn(a,'day'));assert.equal(a.night.axes.length,4);assert.ok(a.night.rankReason.length>40);for(const id of a.evidence)assert.ok([...examples,...selectionPosts].some(p=>p.code===id));}
 assert.equal((html.match(/<button[^>]*role="tab"/g)||[]).length,3);
 assert.equal((html.match(/<div[^>]*role="tabpanel"/g)||[]).length,3);
 assert.ok(!html.includes('id="panel-day"'));assert.ok(!html.includes('href="#day"'));assert.ok(!html.includes('昼PR'));
-assert.equal((html.match(/data-example=/g)||[]).length,10);
-assert.equal((html.match(/data-format="reel"/g)||[]).length,5);assert.equal((html.match(/data-format="photo"/g)||[]).length,5);
+assert.equal((html.match(/data-example=/g)||[]).length,1);assert.equal((html.match(/data-excluded=/g)||[]).length,4);
+assert.equal((html.match(/data-format="reel"/g)||[]).length,1);assert.equal((html.match(/data-format="photo"/g)||[]).length,0);
 assert.equal((html.match(/data-fit=/g)||[]).length,5);assert.equal((html.match(/data-axis/g)||[]).length,20);
 for(const name of ['GABUKICHI','包包包','肉と米と酒','とり料理 壱の宮','大衆酒場キミドリ'])assert.ok(!html.includes(name));
 const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);assert.equal(new Set(ids).size,ids.length);
@@ -45,7 +36,7 @@ for(const [,hash] of html.matchAll(/href="#([^"]+)"/g))assert.ok(ids.includes(ha
 assert.equal(plans.length,3);assert.equal(patterns.length,3);
 for(const p of [...plans,...patterns])for(const id of p.refs)assert.ok(examples.some(x=>x.code===id));
 for(const p of plans){assert.equal(p.shots.length,7);let last=0;for(const [range] of p.shots){const [start,end]=range.replace('秒','').split('–').map(Number);assert.equal(start,last);assert.ok(end>start);last=end;}assert.equal(last,22);assert.ok(html.includes('id="shot-'+p.id+'"'));}
-assert.equal(json.posts.length,5);assert.equal(json.supportPosts.length,5);assert.equal(json.extraCreators.length,6);assert.equal(json.accounts.filter(a=>a.night.score===null).length,3);
+assert.equal(json.posts.length,1);assert.equal(json.supportPosts.length,0);assert.equal(json.priceExcludedReels.length,4);assert.equal(json.extraCreators.length,0);assert.equal(json.accounts.filter(a=>a.night.score===null).length,3);
 assert.equal(escapeHtml('<a & "hi">'),'&lt;a &amp; &quot;hi&quot;&gt;');new Function(dashboardRuntime);
 for(const word of ['undefined','NaN','獅子楼','福島区','和食 徳','うお家'])assert.ok(!html.includes(word));
 const tabIds=['overview','night','examples'];
@@ -64,4 +55,4 @@ tabs[2].handlers.keydown({key:'Home',preventDefault(){}});assert.equal(location.
 location.hash='#shot-night-hamayaki';events.hashchange();assert.ok(target.open&&target.scrolled);
 button.handlers.click();assert.ok(classes.has('motion-paused'));media.matches=true;media.handler();assert.ok(button.disabled);
 doc.hidden=true;doc.visibilitychange();assert.ok(classes.has('motion-hidden'));
-console.log('PASS: 3 tabs / no daytime UI / 10 examples = 5 reels + 5 photo supplements / 9 listing-price matches + 1 conditional / unknown metrics preserved / 5 candidates, 20 axes / 3 × 22s plans / anchors / keyboard / motion');
+console.log('PASS: 3 tabs / 5 original accounts only / 1 selected reel + 4 price-excluded audit entries / 5 verified view counts / no photos / target shortfall explicit / 3 x 22s plans / anchors / keyboard / motion');
