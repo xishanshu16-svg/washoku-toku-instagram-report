@@ -1,3 +1,27 @@
+# 最新更新：指定5名・リールのみ（2026-10-23）
+
+以下の過去版記録に優先する現行版の記録。
+
+- 公開URL：https://tsubotei-utsunomiya-pr-report.xishanshu16.workers.dev/#examples
+- 公開ソースcommit：1e30500da753a3e66fab88459df399f8f2919b2e
+- origin/mainとの一致・push成功を確認。
+- Worker Version：ca9b2ee4-758c-4ae7-8feb-5a0691c0778c
+- 3タブ維持。写真・指定外アカウントを除外。
+- 指定5名の候補5リールで再生確認。価格を公式・HPで照合した採用はルタンブル15.5万の1件。
+- カモメヤ24.2万／15.3万、海色12.7万、源天12.3万は通常予算の媒体差で選外。本枠に合算しない。
+- 目標10件に対し9件不足。全投稿・全期間の網羅ではない。本人実会計と全編映像は未確認。
+- 公開版の元投稿・再生確認元・価格根拠、詳細開閉、夜PRの発信者別根拠を確認。
+- 公開390pxで横幅390／スクロール幅390、採用1／選外4の分離と詳細表示を確認。viewportは解除。
+- 自動検証PASS：指定5名限定・投稿者と根拠の対応・5再生値・いいね／コメント・写真0・3タブ・21撮影区間・内部参照・キーボード・背景停止。
+- 公開ブラウザーのwarn/errorなし。画面証跡：qa/public-reels-only-desktop.png、public-reels-only-mobile.png、public-reels-only-result.png。
+- HTTP200・公開とローカルのSHA-256一致：
+  - index.html 74363bytes / 6d65ec81b315dff04f028ca8586011514d3e79181d8c331394f2723fcc7b27fe
+  - evidence.json 44955bytes / 8aeb9b86a996fbc474487ded915eb6b0e90320d2b385c919a873a5adad1fb15d
+
+本記録・画面証跡は後続の文書commit。公開assetsは上記ソースcommitと同じ。
+
+---
+
 # 公開・検証記録（居酒屋の近似事例拡大版）
 
 ## 現行公開版：近似事例を1件から10件へ
