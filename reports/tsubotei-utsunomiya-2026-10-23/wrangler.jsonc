@@ -1,0 +1,6 @@
+{
+  "name": "tsubotei-utsunomiya-pr-report",
+  "compatibility_date": "2026-10-23",
+  "assets": {"directory": "public"},
+  "observability": {"enabled": true}
+}

@@ -1,0 +1,55 @@
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import vm from 'node:vm';
+import {meta,store,sources,accounts,posts,supportPosts,orders,axes,patterns,coverage} from './data.mjs';
+import {plans} from './plans.mjs';
+import {dashboardRuntime,escapeHtml} from './shell.mjs';
+const html=await readFile(new URL('./public/index.html',import.meta.url),'utf8');
+const json=JSON.parse(await readFile(new URL('./public/evidence.json',import.meta.url),'utf8'));
+const all=[...posts,...supportPosts];
+assert.equal(accounts.length,5);assert.equal(new Set(accounts.map(a=>a.handle)).size,5);
+assert.deepEqual(new Set(accounts.map(a=>a.handle)),new Set(['tochino_ki_','usagi.gurume','tochigi__gurume','tochigi_gourmet1','tochigi_discover']));
+assert.equal(posts.length,10);assert.equal(new Set(posts.map(p=>p.code)).size,10);
+assert.equal(posts.filter(p=>p.views>=100000).length,6);assert.equal(posts.filter(p=>p.meal.startsWith('夜')).length,9);
+assert.equal(posts.filter(p=>p.meal.startsWith('時間帯未特定')).length,1);
+assert.equal(Object.values(coverage.profileCounts).reduce((a,b)=>a+b,0),60);
+assert.equal(Object.values(coverage.reelCounts).reduce((a,b)=>a+b,0),115);
+assert.equal(new Set(coverage.detailIds).size,13);assert.equal(coverage.fullVideoCount,0);
+assert.equal(supportPosts.length,1);assert.equal(supportPosts[0].format,'カルーセル');assert.equal(supportPosts[0].views,null);
+for(const p of all){assert.ok(coverage.detailIds.includes(p.code));assert.equal(p.fullVideoObserved,false);assert.equal(p.checkedAt,meta.checkedAt);assert.ok(p.url.endsWith('/'+p.code+'/'));}
+assert.equal(posts.find(p=>p.code==='DdJPsrvzW_3').comments,0);
+for(const p of posts){assert.equal(p.actualSpend,null);assert.equal(p.budget,null);assert.ok(p.hook.includes('未確認'));assert.ok(p.views>=0);}
+assert.equal(posts.filter(p=>p.menuPrice===null).length,3);
+assert.deepEqual(orders.day,[]);assert.equal(orders.night.length,5);
+const scores=orders.night.map(h=>accounts.find(a=>a.handle===h).night.score);
+assert.deepEqual(scores,[5,4,4,3,3]);
+for(const a of accounts){assert.equal(a.day.score,null);assert.equal(a.day.status,'対象外');assert.equal(a.night.axes.length,4);assert.ok(a.night.rankReason.length>40);for(const id of a.evidence)assert.ok(all.some(p=>p.code===id));}
+assert.equal(axes.length,4);assert.equal(plans.length,3);assert.equal(patterns.length,3);
+for(const p of [...plans,...patterns])for(const id of p.refs)assert.ok(all.some(x=>x.code===id));
+for(const p of plans){assert.equal(p.meal,'night');assert.equal(p.shots.length,7);assert.ok(p.fieldOrder);assert.ok(html.includes('id="shot-'+p.id+'"'));let last=0;for(const [range] of p.shots){const [start,end]=range.replace('秒','').split('–').map(Number);assert.equal(start,last);assert.ok(end>start);last=end;}assert.equal(last,22);}
+assert.equal((html.match(/<button[^>]*role="tab"/g)||[]).length,4);assert.equal((html.match(/<div[^>]*role="tabpanel"/g)||[]).length,4);
+assert.equal((html.match(/data-example=/g)||[]).length,10);assert.equal((html.match(/data-fit=/g)||[]).length,5);assert.equal((html.match(/data-day-status/g)||[]).length,5);assert.equal((html.match(/data-axis/g)||[]).length,20);
+const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);assert.equal(new Set(ids).size,ids.length);
+for(const [,hash] of html.matchAll(/href="#([^"]+)"/g))assert.ok(ids.includes(hash),'Missing anchor '+hash);
+assert.equal(store.budget.day,null);assert.equal(store.phone,'080-4209-2158');assert.ok(sources.tabelog.endsWith('/9013986/'));
+assert.equal(meta.period,null);assert.equal(meta.priceFilter,null);assert.equal(meta.checkedAt,'2026-10-23');
+assert.equal(json.supportPosts[0].views,null);assert.equal(json.posts.find(p=>p.menuPrice===null).menuPrice,null);
+for(const word of ['undefined','NaN','獅子楼','福島区','もみだれ','和食 徳','うお家'])assert.ok(!html.includes(word),'Unrelated artifact '+word);
+assert.equal(escapeHtml('<a & "hi">'), '&lt;a &amp; &quot;hi&quot;&gt;');
+new Function(dashboardRuntime);
+const tabIds=['overview','day','night','examples'];
+const tabs=tabIds.map(id=>({dataset:{tab:id},attrs:{},handlers:{},setAttribute(k,v){this.attrs[k]=v},addEventListener(k,f){this.handlers[k]=f},focus(){this.focused=true}}));
+const panels=tabIds.map(id=>({id:'panel-'+id,hidden:false}));const events={},classes=new Set();
+const button={attrs:{},handlers:{},setAttribute(k,v){this.attrs[k]=v},addEventListener(k,f){this.handlers[k]=f}};
+const media={matches:false,addEventListener(k,f){this.handler=f}};
+const target={getAttribute:()=>null,closest(s){return s==='details'?this:panels[0]},scrollIntoView(){this.scrolled=true}};
+const doc={hidden:false,body:{classList:{add:c=>classes.add(c),toggle(c,b){if(b)classes.add(c);else classes.delete(c)}}},querySelectorAll:s=>s==='[role="tab"]'?tabs:panels,querySelector:s=>s==='.motion-toggle'?button:{scrollIntoView(){}},getElementById:id=>id==='shot-night-hamayaki'?target:null,addEventListener(k,f){this[k]=f}};
+const location={hash:'#night'};
+vm.runInNewContext(dashboardRuntime,{document:doc,location,history:{pushState(a,b,h){location.hash=h}},window:{addEventListener(k,f){events[k]=f}},matchMedia:()=>media,requestAnimationFrame:f=>f()});
+assert.equal(panels.filter(p=>!p.hidden)[0].id,'panel-night');tabs[1].handlers.click();assert.equal(location.hash,'#day');
+tabs[1].handlers.keydown({key:'End',preventDefault(){}});assert.equal(location.hash,'#examples');assert.ok(tabs[3].focused);
+tabs[3].handlers.keydown({key:'Home',preventDefault(){}});assert.equal(location.hash,'#overview');
+location.hash='#shot-night-hamayaki';events.hashchange();assert.ok(target.open&&target.scrolled);assert.equal(panels.filter(p=>!p.hidden)[0].id,'panel-overview');
+button.handlers.click();assert.ok(classes.has('motion-paused'));button.handlers.click();assert.ok(!classes.has('motion-paused'));media.matches=true;media.handler();assert.ok(button.disabled&&classes.has('motion-paused'));
+doc.hidden=true;doc.visibilitychange();assert.ok(classes.has('motion-hidden'));
+console.log('PASS: 4 tabs / 5 night candidates + 5 daytime N/A / 20 rationale axes / 10 reels (9 night-use, 1 unknown; 6 over 100k) / 13 detail pages / 115 candidates / 3 × 22-second plans / null vs verified zero / anchors / keyboard / motion');
